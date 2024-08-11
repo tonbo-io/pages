@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Iosevka Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('/fonts/iosevka/WOFF2/Iosevka-Light.woff2') format('woff2'), url('/fonts/iosevka/TTF/Iosevka-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Web Medium';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('/fonts/iosevka/WOFF2/Iosevka-Medium.woff2') format('woff2'), url('/fonts/iosevka/TTF/Iosevka-Medium.ttf') format('truetype');
+}
