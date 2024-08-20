@@ -2,7 +2,6 @@
 	import Tonbo from './tonbo.svelte';
 	import XLogo from '$lib/images/x-logo.png';
 	import DiscordLogo from '$lib/images/discord-logo.png';
-	import GitHubLogo from '$lib/images/github-logo.svg';
 </script>
 
 <nav class={$$props.class}>
@@ -26,14 +25,12 @@
 		>
 			&nbsp;About&nbsp;
 		</div> -->
-		<a href="https://github.com/tonbo-io/tonbo">
+		<a href="https://docs.rs/tonbo/latest/tonbo/">
 			<div
 				type="button"
 				class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center group hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
 			>
-				&nbsp;
-				<img src={GitHubLogo} alt="GitHub Logo" class="w-5 group-hover:invert" />
-				&nbsp;GitHub&nbsp;
+				&nbsp;Docs&nbsp;
 			</div>
 		</a>
 		<a href="https://discord.com/invite/8jm9WMfX">

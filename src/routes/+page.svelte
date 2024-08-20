@@ -1,5 +1,6 @@
 <script>
 	import Dragonfly from './dragonfly.svelte';
+	import GitHubLogo from '$lib/images/github-logo.svg';
 </script>
 
 <svelte:head>
@@ -36,16 +37,17 @@
 				<div class="flex items-end justify-between z-10">
 					<Dragonfly />
 					<div class="flex">
-						<a href="https://docs.rs/tonbo/latest/tonbo/">
+						<a href="https://github.com/tonbo-io/tonbo">
 							<div
-								class="w-[8rem] h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative text-[1.5rem] mr-[2rem] select-none"
+								class=" h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative text-[1.5rem] mr-[2rem] select-none pl-[1rem] pr-[1rem] group"
 							>
-								Read Docs
+								<img src={GitHubLogo} alt="GitHub Logo" class="group-hover:invert w-[1.5rem]" />
+								<p>&nbsp;Star Us</p>
 							</div>
 						</a>
 						<a href="https://github.com/tonbo-io/tonbo/tree/main/examples">
 							<div
-								class="w-[8rem] h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-[1.5rem] bg-tonbo-red select-none"
+								class="h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-[1.5rem] bg-tonbo-red select-none pl-[1rem] pr-[1rem]"
 							>
 								Example
 							</div>
