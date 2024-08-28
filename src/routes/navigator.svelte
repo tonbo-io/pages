@@ -12,7 +12,7 @@
 		<a href="/"><Tonbo /></a>
 	</div>
 	<div class="z-10 flex order-last pr-8">
-		<a href="/blog/introducing-tonbo">
+		<a href="/blogs">
 			<div
 				type="button"
 				class="relative flex items-center justify-center h-8 px-2 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"

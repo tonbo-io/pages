@@ -8,7 +8,10 @@
 	<div
 		class=" min-h-screen h-fit mt-[103px] sm:pt-10 sm:w-[800px] md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
 	>
-		<PageHeader title="About Tonbo" />
+		<div class="hidden sm:flex sm:w-[798px] md:w-[998px] lg:w-[1198px]">
+			<PageHeader title="About Tonbo" />
+		</div>
+
 		<div class="sm:w-[600px] md:w-[816px] px-12 py-6 min-h-full m-auto">
 			<div>
 				<h1
@@ -73,7 +76,7 @@
 	</div> -->
 
 	<div
-		class="m-auto h-[4rem] border-t-2 w-[1200px] sm:w-[800px] md:w-[1000px] lg:w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
+		class="m-auto h-[4rem] border-t-2 w-[480px] sm:w-[800px] md:w-[1000px] lg:w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
 	>
 		© Copyright 2024-, Tonbo IO.
 	</div>
