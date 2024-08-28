@@ -10,7 +10,7 @@
 	class="bg-background-dark min-w-[75rem] pt-12 flex selection:bg-background-light selection:text-background-dark font-code"
 >
 	<div
-		class="w-[75rem] mx-auto border-l border-r border-t relative border-background-light flex flex-col pb-[6rem]"
+		class="w-[75rem] mx-auto border-l border-r relative border-background-light flex flex-col pb-[6rem]"
 	>
 		<div class="mt-[3rem] text-font-light border-b border-background-light flex">
 			<article
@@ -33,19 +33,19 @@
 					</div>
 				</div>
 
-				<div class="flex items-end justify-between z-10">
+				<div class="z-10 flex items-end justify-between">
 					<Dragonfly />
 					<div class="flex">
 						<a href="https://docs.rs/tonbo/latest/tonbo/">
 							<div
-								class="w-[8rem] h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative text-[1.5rem] mr-[2rem] select-none"
+								class="px-6 py-2 border-2 border-background-light flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative text-[1.5rem] mr-[2rem] select-none"
 							>
 								Read Docs
 							</div>
 						</a>
 						<a href="https://github.com/tonbo-io/tonbo/tree/main/examples">
 							<div
-								class="w-[8rem] h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-[1.5rem] bg-tonbo-red select-none"
+								class="px-6 py-2 border-2 border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-[1.5rem] bg-[#EF6A21] select-none"
 							>
 								Example
 							</div>
@@ -87,7 +87,7 @@ DISK: SamSung 970 EVO Plus 4TB
 				</pre>
 			</div>
 			<article class="h-[23rem] flex flex-col justify-center ml-[4rem] mr-[2rem]">
-				<p class="text-[1.5rem] mb-[1rem]">2.2x faster than RocksDB</p>
+				<p class="text-[1.5rem] mb-[1rem] font-semibold">2.2x faster than RocksDB</p>
 				<p class="text-[1rem]">
 					Because of Tonbo's native support for structured data zero-copy loading and projection
 					pushing down, Tonbo is 2.2x faster than RocksDB.
@@ -104,16 +104,18 @@ DISK: SamSung 970 EVO Plus 4TB
 		>
 			Just Arrow, Structured, Portable
 		</div>
-		<div class="border border-background-dark flex">
-			<article class="border-r border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">Vendor lock-in free</p>
+		<div class="flex border border-background-dark">
+			<article class="border-r border-dashed border-background-dark px-[2rem] my-10 flex-1">
+				<p class="text-[1.5rem] mb-[1rem] font-semibold">Vendor lock-in free</p>
 				<p class="text-[1rem]">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
-			<article class=" border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">Combine agility of KV and convinient of structured</p>
+			<article class="border-dashed border-background-dark px-[2rem] my-10 flex-1">
+				<p class="text-[1.5rem] mb-[1rem] font-semibold">
+					Combine agility of KV and convinient of structured
+				</p>
 				<p class="text-[1rem]">
 					Thanks to Rust lifetime, type system and asynchronous, Tonbo allows user to save each
 					overhead as need with safety: raw data reference, compile-time declared schema, and so on.
@@ -126,8 +128,8 @@ DISK: SamSung 970 EVO Plus 4TB
 					</a>
 				</p>
 			</article>
-			<article class="border-l border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">From many sources to many targets</p>
+			<article class="border-dashed border-l border-background-dark px-[2rem] my-10 flex-1">
+				<p class="text-[1.5rem] mb-[1rem] font-semibold">From many sources to many targets</p>
 				<p class="text-[1rem]">
 					As an embedded database, Tonbo supports customizing runtime and file system, and also it
 					is designed for running on kinds of target platforms, we will complete official support
@@ -136,7 +138,7 @@ DISK: SamSung 970 EVO Plus 4TB
 			</article>
 		</div>
 		<div
-			class="h-[4rem] flex items-center justify-center text-center text-background-dark border-t border-background-dark mt-[6rem]"
+			class="h-[4rem] flex items-center justify-center text-center text-background-dark border-t border-dashed border-background-dark mt-[6rem] mx-10"
 		>
 			© Copyright 2024-, Tonbo IO.
 		</div>

@@ -11,49 +11,48 @@
 	>
 		<a href="/"><Tonbo /></a>
 	</div>
-	<div class="order-last flex pr-8 z-10">
+	<div class="z-10 flex order-last pr-8">
 		<a href="/blog/introducing-tonbo">
 			<div
 				type="button"
-				class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
+				class="relative flex items-center justify-center h-8 px-2 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
 			>
-				&nbsp;Blog&nbsp;
+				Blogs
 			</div>
 		</a>
-		<!-- <div
-			type="button"
-			class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
-		>
-			&nbsp;About&nbsp;
-		</div> -->
+		<a href="/about">
+			<div
+				type="button"
+				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
+			>
+				About
+			</div>
+		</a>
 		<a href="https://github.com/tonbo-io/tonbo">
 			<div
 				type="button"
-				class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center group hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
+				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 			>
-				&nbsp;
-				<img src={GitHubLogo} alt="GitHub Logo" class="w-5 group-hover:invert" />
-				&nbsp;GitHub&nbsp;
+				<img src={GitHubLogo} alt="GitHub Logo" class="w-6 mr-2 group-hover:invert" />
+				GitHub
 			</div>
 		</a>
 		<a href="https://discord.com/invite/8jm9WMfX">
 			<div
 				type="button"
-				class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center group hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
+				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 			>
-				&nbsp;
-				<img src={DiscordLogo} alt="Discord Logo" class="w-5 group-hover:invert" />
-				&nbsp;Discord&nbsp;
+				<img src={DiscordLogo} alt="Discord Logo" class="w-6 mr-2 group-hover:invert" />
+				Discord
 			</div>
 		</a>
 		<a href="https://x.com/tonboio">
 			<div
 				type="button"
-				class="border border-background-light text-font-light h-8 bg-background-dark flex items-center justify-center group hover:bg-background-light hover:text-background-dark cursor-pointer relative select-none"
+				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 			>
-				&nbsp;
-				<img src={XLogo} alt="X Logo" class="h-4 w-auto group-hover:invert" />
-				&nbsp;X&nbsp;
+				<img src={XLogo} alt="X Logo" class="w-auto h-4 mr-2 group-hover:invert" />
+				X
 			</div>
 		</a>
 	</div>
