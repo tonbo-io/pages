@@ -8,7 +8,7 @@
 	<div
 		class=" min-h-screen h-fit mt-[103px] sm:pt-10 sm:w-[800px] md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
 	>
-		<div class="flex sm:w-[798px] md:w-[998px] lg:w-[1198px] sticky sm:static top-0">
+		<div class="flex sm:min-w-full md:min-w-[998px] lg:min-w-[1198px] sticky sm:static top-0">
 			<PageHeader title="Tonbo’s Blogs" />
 		</div>
 		<div class="sm:w-[480px] md:w-[816px] px-2 py-6 min-h-full m-auto">
@@ -56,7 +56,7 @@
 	</div>
 
 	<div
-		class="m-auto h-[4rem] border-t-2 sm:w-[800px] md:w-[1000px] lg:w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
+		class="m-auto h-[4rem] border-t-2 sm:min-w-[400px] md:min-w-[1000px] lg:min-w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
 	>
 		© Copyright 2024-, Tonbo IO.
 	</div>

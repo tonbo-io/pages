@@ -6,9 +6,9 @@
 
 <div class="bg-[#E7F1BE]">
 	<div
-		class=" min-h-screen h-fit mt-[103px] sm:pt-10 sm:w-[800px] md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
+		class="min-h-screen h-fit mt-[103px] sm:pt-10 sm:w-[800px] md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
 	>
-		<div class="hidden sm:flex sm:w-[798px] md:w-[998px] lg:w-[1198px]">
+		<div class="hidden sm:flex sm:w-[798px] md:w-[998px] lg:w-[1198px] m-auto">
 			<PageHeader title="About Tonbo" />
 		</div>
 

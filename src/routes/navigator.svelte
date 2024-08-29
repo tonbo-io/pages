@@ -7,53 +7,69 @@
 
 <nav class={$$props.class}>
 	<div
-		class="z-10 border-l-[2rem] border-r-[1rem] border-background-dark selection:bg-background-light selection:text-background-dark"
+		class="absolute w-10/12 md:w-full h-[56px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0"
+	>
+		<div class="mt-[65px] relative w-full">
+			<div
+				class="absolute bottom-0 md:bottom-[50px] z-10 flex order-last right-[10px] bg-background-dark"
+			>
+				<a href="/blogs">
+					<div
+						type="button"
+						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
+					>
+						Blogs
+					</div>
+				</a>
+				<a href="/about">
+					<div
+						type="button"
+						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
+					>
+						About
+					</div>
+				</a>
+				<a href="https://github.com/tonbo-io/tonbo">
+					<div
+						type="button"
+						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+					>
+						<img
+							src={GitHubLogo}
+							alt="GitHub Logo"
+							class="max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert"
+						/>
+						<span class="hidden sm:block">GitHub</span>
+					</div>
+				</a>
+				<a href="https://discord.com/invite/8jm9WMfX">
+					<div
+						type="button"
+						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+					>
+						<img
+							src={DiscordLogo}
+							alt="Discord Logo"
+							class="max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert"
+						/>
+						<span class="hidden sm:block">Discord</span>
+					</div>
+				</a>
+				<a href="https://x.com/tonboio">
+					<div
+						type="button"
+						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+					>
+						<img src={XLogo} alt="X Logo" class="max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert" />
+						<span class="hidden sm:block">X</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div
+		class="w-fit z-10 h-[45px] border-l-[1rem] border-r-[1rem] border-background-dark bg-background-dark selection:bg-background-light selection:text-background-dark relative mt-[10px]"
 	>
 		<a href="/"><Tonbo /></a>
-	</div>
-	<div class="z-10 flex order-last pr-8">
-		<a href="/blogs">
-			<div
-				type="button"
-				class="relative flex items-center justify-center h-8 px-2 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
-			>
-				Blogs
-			</div>
-		</a>
-		<a href="/about">
-			<div
-				type="button"
-				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
-			>
-				About
-			</div>
-		</a>
-		<a href="https://github.com/tonbo-io/tonbo">
-			<div
-				type="button"
-				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-			>
-				<img src={GitHubLogo} alt="GitHub Logo" class="w-6 mr-2 group-hover:invert" />
-				GitHub
-			</div>
-		</a>
-		<a href="https://discord.com/invite/8jm9WMfX">
-			<div
-				type="button"
-				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-			>
-				<img src={DiscordLogo} alt="Discord Logo" class="w-6 mr-2 group-hover:invert" />
-				Discord
-			</div>
-		</a>
-		<a href="https://x.com/tonboio">
-			<div
-				type="button"
-				class="relative flex items-center justify-center h-8 px-4 mx-2 border cursor-pointer select-none border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-			>
-				<img src={XLogo} alt="X Logo" class="w-auto h-4 mr-2 group-hover:invert" />
-				X
-			</div>
-		</a>
 	</div>
 </nav>
