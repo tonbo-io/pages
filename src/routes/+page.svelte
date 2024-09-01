@@ -58,10 +58,10 @@
 </div>
 
 <div
-	class=" bg-background-light min-w-[75rem] selection:bg-background-dark selection:text-background-light font-code"
+	class=" bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
-	<div class="min-h-screen w-[75rem] mx-auto relative flex flex-col">
-		<div class="columns-2 mt-[3rem] mb-[6rem]">
+	<div class="relative flex flex-col min-h-screen mx-auto w-full sm:w-[640px] md:w-[1200px]">
+		<div class="mt-5 mb-10 md:columns-2">
 			<div class="border border-background-dark flex flex-col h-[23rem]">
 				<div
 					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
@@ -86,8 +86,10 @@ RAM: 64GB DDR4 2933MHz * 8
 DISK: SamSung 970 EVO Plus 4TB
 				</pre>
 			</div>
-			<article class="h-[23rem] flex flex-col justify-center ml-[4rem] mr-[2rem]">
-				<p class="text-[1.5rem] mb-[1rem] font-semibold">2.2x faster than RocksDB</p>
+			<article class="md:h-[23rem] mt-5 flex flex-col justify-center md:ml-[4rem] md:mr-[2rem]">
+				<p class="text-[1.5rem] mb-[1rem] font-semibold text-center md:text-left">
+					2.2x faster than RocksDB
+				</p>
 				<p class="text-[1rem]">
 					Because of Tonbo's native support for structured data zero-copy loading and projection
 					pushing down, Tonbo is 2.2x faster than RocksDB.
@@ -99,24 +101,30 @@ DISK: SamSung 970 EVO Plus 4TB
 			</article>
 		</div>
 
+		<!-- PART 3 -->
 		<div
-			class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
+			class="bg-background-dark h-14 text-font-light flex items-center justify-center text-base sm:text-[1.5rem] selection:bg-background-light selection:text-background-dark max-w-[1194px] mx-auto w-full"
 		>
 			Just Arrow, Structured, Portable
 		</div>
-		<div class="flex border border-background-dark">
-			<article class="border-r border-dashed border-background-dark px-[2rem] my-10 flex-1">
-				<p class="text-[1.5rem] mb-[1rem] font-semibold">Vendor lock-in free</p>
-				<p class="text-[1rem]">
+
+		<div class="flex flex-col sm:flex-row border border-background-dark max-w-[1194px] mx-auto">
+			<article
+				class="border-b sm:border-r sm:border-b-0 border-dashed border-background-dark mx-[2rem] sm:mx-1 py-5 my-2.5 sm:my-0 flex-1 sm:px-4"
+			>
+				<p class="mb-4 text-base font-medium leading-normal text-center">Vendor lock-in free</p>
+				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
-			<article class="border-dashed border-background-dark px-[2rem] my-10 flex-1">
-				<p class="text-[1.5rem] mb-[1rem] font-semibold">
+			<article
+				class="border-dashed sm:border-b-0 border-b sm:border-r border-background-dark mx-[2rem] sm:mx-1 py-5 my-2.5 flex-1 sm:px-4"
+			>
+				<p class="mb-4 text-base font-medium leading-normal text-center">
 					Combine agility of KV and convinient of structured
 				</p>
-				<p class="text-[1rem]">
+				<p class="text-base leading-normal">
 					Thanks to Rust lifetime, type system and asynchronous, Tonbo allows user to save each
 					overhead as need with safety: raw data reference, compile-time declared schema, and so on.
 					And push-down support makes it convenient to query structured data:
@@ -128,15 +136,18 @@ DISK: SamSung 970 EVO Plus 4TB
 					</a>
 				</p>
 			</article>
-			<article class="border-dashed border-l border-background-dark px-[2rem] my-10 flex-1">
-				<p class="text-[1.5rem] mb-[1rem] font-semibold">From many sources to many targets</p>
-				<p class="text-[1rem]">
+			<article class="mx-[2rem] sm:mx-1 py-5 my-2.5 flex-1 sm:px-4">
+				<p class="mb-4 text-base font-medium leading-normal text-center">
+					From many sources to many targets
+				</p>
+				<p class="text-base leading-normal">
 					As an embedded database, Tonbo supports customizing runtime and file system, and also it
 					is designed for running on kinds of target platforms, we will complete official support
 					WASM / OPFS, Python asyncio and object storages in Sep 2024.
 				</p>
 			</article>
 		</div>
+
 		<div
 			class="h-[4rem] flex items-center justify-center text-center text-background-dark border-t border-dashed border-background-dark mt-[6rem] mx-10"
 		>
