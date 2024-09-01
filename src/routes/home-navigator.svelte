@@ -7,11 +7,14 @@
 
 <nav class={$$props.class}>
 	<div
-		class="absolute w-10/12 md:w-full h-[56px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0"
+		class="absolute w-[400px] sm:w-[570px] md:w-full border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
 	>
-		<div class="mt-[68px] relative w-full">
+		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6">
+			Tonbo incurs minimal cost to insert and scan structured data via Apache Arrow.
+		</div>
+		<div class="mt-[36px] relative w-full">
 			<div
-				class="absolute bottom-0 md:bottom-[50px] z-10 flex order-last right-[10px] bg-background-dark"
+				class="absolute bottom-[-17px] md:bottom-[20px] z-10 flex order-last right-[10px] bg-background-dark"
 			>
 				<a href="/blogs">
 					<div
