@@ -13,7 +13,9 @@
 	<div
 		class="w-full sm:w-[640px] md:w-[1200px] p-3.5 pb-10 mx-auto bg-background-dark border-x-2 border-b-2 border-background-light"
 	>
-		<div class="text-white">Tonbo incurrs minimal cost to insert and scan structured data.</div>
+		<div class="hidden text-white">
+			Tonbo incurrs minimal cost to insert and scan structured data.
+		</div>
 		<div
 			class="border-2 text-5xl border-background-light w-[93%] md:w-[588px] text-[#FFFDEC] p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12"
 		>
