@@ -6,7 +6,7 @@
 
 <div class="bg-[#E7F1BE]">
 	<div
-		class="min-h-screen h-fit sm:pt-10 sm:w-full md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
+		class="min-h-screen h-fit sm:pt-10 sm:w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 md:border-b-2 border-black"
 	>
 		<div class="hidden sm:flex sm:w-full md:w-[998px]lg:w-[1198px] m-auto">
 			<PageHeader title="About Tonbo" />
@@ -86,16 +86,4 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <div
-		class="m-auto h-[4rem] flex items-center justify-center text-center text-background-dark border-dashed border-background-dark mt-[6rem] mx-4 border-t-2 w-[1200px] sm:w-[800px] md:w-[1000px] lg:w-[1200px]"
-	>
-		© Copyright 2024-, Tonbo IO.
-	</div> -->
-
-	<!-- <div
-		class="m-auto h-[4rem] border-t-2 w-[480px] sm:w-[800px] md:w-[1000px] lg:w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
-	>
-		© Copyright 2024-, Tonbo IO.
-	</div> -->
 </div>

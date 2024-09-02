@@ -214,10 +214,4 @@ pub struct User {
 			</p>
 		</article>
 	</div>
-
-	<div
-		class="m-auto h-[4rem] border-t-2 sm:min-w-[400px] md:min-w-[1000px] lg:min-w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
-	>
-		© Copyright 2024-, Tonbo IO.
-	</div>
 </div>

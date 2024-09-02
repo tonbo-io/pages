@@ -11,7 +11,7 @@
 		<div class="flex m-auto w-full md:min-w-[998px] lg:min-w-[1198px] sticky sm:static top-0">
 			<PageHeader title="Tonbo’s Blogs" />
 		</div>
-		<div class="sm:w-[630px] md:w-[914px] md:px-0 px-2 py-6 min-h-full m-auto">
+		<div class="md:w-[914px] md:px-0 px-2 sm:px-10 py-6 min-h-full m-auto">
 			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 
-		<div class="sm:w-[630px] md:w-[914px] md:px-0 px-2 py-6 min-h-full m-auto">
+		<div class=" md:w-[914px] sm:px-10 px-2 py-6 min-h-full m-auto">
 			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">
@@ -53,11 +53,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div
-		class="m-auto h-[4rem] border-t-2 sm:min-w-[400px] md:min-w-[1000px] lg:min-w-[1200px] text-center flex items-center justify-center border-dashed border-background-dark mt-60"
-	>
-		© Copyright 2024-, Tonbo IO.
 	</div>
 </div>

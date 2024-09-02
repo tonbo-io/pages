@@ -7,9 +7,9 @@
 
 <nav class={$$props.class}>
 	<div
-		class="absolute w-[400px] sm:w-[570px] md:w-full border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
+		class="absolute w-[calc(100%-5rem)] md:w-[1200px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
 	>
-		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6">
+		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6 h-[48px]">
 			Tonbo incurs minimal cost to insert and scan structured data via Apache Arrow.
 		</div>
 		<div class="mt-[36px] relative w-full">
