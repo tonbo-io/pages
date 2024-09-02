@@ -99,7 +99,7 @@
 	class=" bg-background-light selection:bg-background-dark selection:text-background-light font-code p-[28px]"
 >
 	<div class="relative flex flex-col min-h-screen mx-auto w-full sm:w-[640px] md:w-[1200px]">
-		<div class="mt-5 mb-10 md:columns-2">
+		<div class="mt-5 mb-20 md:columns-2">
 			<div class="flex flex-col border border-background-dark">
 				<div
 					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
@@ -148,20 +148,20 @@ DISK: SamSung 970 EVO Plus 4TB
 			Just Arrow, Structured, Portable
 		</div>
 
-		<div class="flex flex-col sm:flex-row border border-background-dark max-w-[1194px] mx-auto">
+		<div class="flex flex-col md:flex-row border border-background-dark max-w-[1194px] mx-auto">
 			<article
-				class="border-b sm:border-r sm:border-b-0 border-dashed border-background-dark mx-[2rem] sm:mx-1 py-5 my-2.5 sm:my-0 flex-1 sm:px-4"
+				class="border-b md:border-r md:border-b-0 border-dashed border-background-dark mx-[2rem] md:mx-1 py-5 my-2.5 md:my-0 flex-1 md:px-4"
 			>
-				<p class="mb-4 text-base font-medium leading-normal text-center">Vendor lock-in free</p>
+				<p class="mb-4 text-lg font-medium leading-normal text-center">Vendor lock-in free</p>
 				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
 			<article
-				class="border-dashed sm:border-b-0 border-b sm:border-r border-background-dark mx-[2rem] sm:mx-1 py-5 my-2.5 flex-1 sm:px-4"
+				class="border-dashed md:border-b-0 border-b md:border-r border-background-dark mx-[2rem] md:mx-1 py-5 my-2.5 flex-1 md:px-4"
 			>
-				<p class="mb-4 text-base font-medium leading-normal text-center">
+				<p class="mb-4 text-lg font-medium leading-normal text-center">
 					Combine agility of KV and convinient of structured
 				</p>
 				<p class="text-base leading-normal">
@@ -171,13 +171,14 @@ DISK: SamSung 970 EVO Plus 4TB
 					<a
 						href="https://github.com/tonbo-io/tonbo/blob/main/examples/datafusion.rs"
 						class="underline"
+						target="_blank"
 					>
 						just about several minutes coding to be integrated into SQL engine for example.
 					</a>
 				</p>
 			</article>
-			<article class="mx-[2rem] sm:mx-1 py-5 my-2.5 flex-1 sm:px-4">
-				<p class="mb-4 text-base font-medium leading-normal text-center">
+			<article class="mx-[2rem] md:mx-1 py-5 my-2.5 flex-1 md:px-4">
+				<p class="mb-4 text-lg font-medium leading-normal text-center">
 					From many sources to many targets
 				</p>
 				<p class="text-base leading-normal">

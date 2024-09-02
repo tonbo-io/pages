@@ -11,8 +11,8 @@
 		<div class="flex m-auto w-full md:min-w-[998px] lg:min-w-[1198px] sticky sm:static top-0">
 			<PageHeader title="Tonbo’s Blogs" />
 		</div>
-		<div class="sm:w-[480px] md:w-[816px] px-2 py-6 min-h-full m-auto">
-			<div class="px-8 py-4 border-black border-[1px] md:border-2">
+		<div class="sm:w-[630px] md:w-[914px] md:px-0 px-2 py-6 min-h-full m-auto">
+			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">
 					<img
@@ -35,8 +35,8 @@
 			</div>
 		</div>
 
-		<div class="sm:w-[480px] md:w-[816px] px-2 py-6 min-h-full m-auto">
-			<div class="px-8 py-4 border-black border-[1px] md:border-2">
+		<div class="sm:w-[630px] md:w-[914px] md:px-0 px-2 py-6 min-h-full m-auto">
+			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">
 					<div>
