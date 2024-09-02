@@ -7,11 +7,11 @@
 
 <nav class={$$props.class}>
 	<div
-		class="absolute w-10/12 md:w-full h-[56px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0"
+		class="absolute w-[calc(100%-2rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] h-[61px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0"
 	>
 		<div class="mt-[68px] relative w-full">
 			<div
-				class="absolute bottom-0 md:bottom-[50px] z-10 flex order-last right-[10px] bg-background-dark"
+				class="absolute bottom-0 md:bottom-[52px] z-10 flex order-last right-[10px] bg-background-dark"
 			>
 				<a href="/blogs">
 					<div

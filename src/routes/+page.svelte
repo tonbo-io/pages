@@ -12,7 +12,7 @@
 	class="w-full px-10 bg-background-dark selection:bg-background-light selection:text-background-dark font-code"
 >
 	<div
-		class="w-full md:w-[1200px] md:p-0 p-3.5 pb-10 mx-auto bg-background-dark border-x-2 border-b-2 border-background-light md:h-[550px]"
+		class="w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px] md:p-0 p-3.5 pb-10 mx-auto bg-background-dark border-x-2 border-b-2 border-background-light md:h-[550px]"
 	>
 		<div class="relative">
 			<div
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div
-				class="border-2 text-5xl border-background-light w-[93%] sm:w-[44%] md:w-[588px] md:h-[361px] text-[#FFFDEC] p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[226px] bg-background-dark"
+				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[588px] lg:h-[361px] md:w-[488px] md:h-[361px] text-[#FFFDEC] p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
 			>
 				A portable embedded database using Arrow.
 			</div>
@@ -31,7 +31,7 @@
 
 		<div class="relative md:h-[449px]">
 			<div
-				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute md:right-[226px] md:bottom-0"
+				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute lg:right-[226px] md:right-[126px] md:bottom-0"
 			>
 				<a href="https://docs.rs/tonbo/latest/tonbo/">
 					<div
@@ -49,7 +49,7 @@
 				</a>
 			</div>
 			<div
-				class="w-fit h-fit mt-[-130px] absolute right-14 md:absolute bottom-0 md:left-[240px] md:top-[260px]"
+				class="w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-[-12px] sm:right-20 md:left-[240px] md:top-[260px]"
 			>
 				<Dragonfly verticalScale="1" overallScale={1} />
 			</div>
@@ -57,14 +57,16 @@
 	</div>
 
 	<div
-		class="w-full p-[28px] md:w-[1200px] h-[64px] mx-auto bg-background-dark border-x-2 border-background-light"
+		class="w-full p-[28px] sm:w-[600px] md:w-[1000px] lg:w-[1200px] h-[64px] mx-auto bg-background-dark border-x-2 border-background-light"
 	></div>
 </div>
 
 <div
 	class="p-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
-	<div class="relative flex flex-col min-h-screen mx-auto w-full md:w-[1200px]">
+	<div
+		class="relative flex flex-col min-h-screen mx-auto w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px]"
+	>
 		<!-- PART 2 -->
 		<div class="mt-5 mb-20 md:columns-2">
 			<div class="flex flex-col border border-background-dark">

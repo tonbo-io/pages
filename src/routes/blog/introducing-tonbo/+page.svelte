@@ -18,12 +18,12 @@ pub struct User {
 
 <div class="bg-[#E7F1BE]">
 	<div
-		class=" min-h-screen h-fit sm:pt-10 w-full md:w-[1000px] lg:w-[1200px] m-auto lg:border-x-2 border-black"
+		class=" min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 border-black"
 	>
 		<article
-			class="w-full mx-auto relative flex flex-col text-background-dark leading-[1.618] pb-[4rem] md:border-x border-background-dark px-10"
+			class="w-full sm:w-[600px] md:w-[800px] mx-auto relative flex flex-col text-background-dark px-10 leading-[1.618] pb-[4rem] md:border-x-0 border-background-dark sm:px-0"
 		>
-			<div class="">
+			<div class="mt-10">
 				<h1 class="text-[1.5rem] font-medium">Intoducing Tonbo</h1>
 				<p class="text-[0.75rem] mb-[1rem]">August 14, 2024 by Tzu Gwo</p>
 			</div>
