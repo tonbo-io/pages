@@ -12,7 +12,7 @@
 			<PageHeader title="About Tonbo" />
 		</div>
 
-		<div class="w-[404px] sm:w-[600px] md:w-[800px] px-2 sm:px-0 py-6 min-h-full m-auto">
+		<div class="px-4 xs:px-10 sm:w-[600px] md:w-[800px] sm:px-0 py-6 min-h-full m-auto">
 			<div>
 				<h1
 					class="py-4 my-4 text-2xl border-b-2 border-black border-dashed sm:border-b-0 md:text-xl"

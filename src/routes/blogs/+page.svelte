@@ -8,10 +8,10 @@
 	<div
 		class=" min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto border-x-2 border-b-2 border-black"
 	>
-		<div class="flex m-auto w-full md:min-w-[998px] lg:min-w-[1198px] sticky sm:static top-0 pt-12">
+		<div class="flex m-auto w-full md:min-w-[998px] lg:min-w-[1198px] top-0 pt-12">
 			<PageHeader title="Tonbo’s Blogs" />
 		</div>
-		<div class="md:w-[914px] md:px-0 px-2 sm:w-[600px] py-6 min-h-full m-auto">
+		<div class="md:w-[914px] md:px-0 px-2 sm:px-0 sm:w-[600px] py-6 min-h-full m-auto">
 			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 
-		<div class=" md:w-[914px] sm:w-[600px] py-6 min-h-full m-auto">
+		<div class="md:w-[914px] md:px-0 px-2 sm:px-0 sm:w-[600px] py-6 min-h-full m-auto">
 			<div class="px-8 md:px-12 py-4 border-black border-[1px] md:border-2">
 				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
 				<div class="flex flex-col md:flex-row">

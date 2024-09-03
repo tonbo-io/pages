@@ -7,9 +7,9 @@
 
 <nav class={$$props.class}>
 	<div
-		class="absolute w-[calc(100%-5rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
+		class="absolute w-[calc(100%-2rem)] xs:w-[calc(100%-5rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
 	>
-		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6 h-[48px]">
+		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6">
 			Tonbo incurs minimal cost to insert and scan structured data via Apache Arrow.
 		</div>
 		<div class="mt-[36px] relative w-full">
@@ -19,7 +19,7 @@
 				<a href="/blogs">
 					<div
 						type="button"
-						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
+						class="relative flex items-center justify-center h-8 px-1.5 mx-1 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
 					>
 						Blogs
 					</div>
@@ -27,7 +27,7 @@
 				<a href="/about">
 					<div
 						type="button"
-						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
+						class="relative flex items-center justify-center h-8 px-1.5 mx-1 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
 					>
 						About
 					</div>
@@ -35,7 +35,7 @@
 				<a href="https://github.com/tonbo-io/tonbo">
 					<div
 						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+						class="relative flex items-center justify-center h-8 px-2 mx-1 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 					>
 						<img
 							src={GitHubLogo}
@@ -48,7 +48,7 @@
 				<a href="https://discord.com/invite/8jm9WMfX">
 					<div
 						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+						class="relative flex items-center justify-center h-8 px-2 mx-1 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 					>
 						<img
 							src={DiscordLogo}
@@ -61,7 +61,7 @@
 				<a href="https://x.com/tonboio">
 					<div
 						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
+						class="relative flex items-center justify-center h-8 px-2 mx-1 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
 					>
 						<img src={XLogo} alt="X Logo" class="max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert" />
 						<span class="hidden sm:block">X</span>

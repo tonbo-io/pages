@@ -9,7 +9,7 @@
 
 <!-- PART 1 -->
 <div
-	class="w-full px-10 bg-background-dark selection:bg-background-light selection:text-background-dark font-code"
+	class="w-full px-4 xs:px-10 bg-background-dark selection:bg-background-light selection:text-background-dark font-code"
 >
 	<div
 		class="w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px] md:p-0 p-3.5 pb-10 mx-auto bg-background-dark border-x-2 border-b-2 border-background-light md:h-[550px]"
@@ -62,7 +62,7 @@
 </div>
 
 <div
-	class="p-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
+	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
 	<div
 		class="relative flex flex-col min-h-screen mx-auto w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px]"
@@ -101,18 +101,20 @@
 
 		<div class="flex flex-col md:flex-row border border-background-dark max-w-[1194px] mx-auto">
 			<article
-				class="border-b md:border-r md:border-b-0 border-dashed border-background-dark mx-[2rem] md:mx-1 py-5 my-2.5 md:my-0 flex-1 md:px-4"
+				class="border-b md:border-r md:border-b-0 border-dashed border-background-dark mx-[2rem] md:mx-1 px-2 py-8 flex-1 md:px-6 md:my-12 lg:px-12 lg:my-12 md:py-0"
 			>
-				<p class="mb-4 text-lg font-medium leading-normal text-center">Vendor lock-in free</p>
+				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
+					Vendor lock-in free
+				</p>
 				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
 			<article
-				class="border-dashed md:border-b-0 border-b md:border-r border-background-dark mx-[2rem] md:mx-1 py-5 my-2.5 flex-1 md:px-4"
+				class="border-dashed md:border-b-0 border-b md:border-r border-background-dark mx-[2rem] md:mx-1 px-2 py-8 md:py-0 flex-1 md:px-12 md:my-12"
 			>
-				<p class="mb-4 text-lg font-medium leading-normal text-center">
+				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
 					Combine agility of KV and convinient of structured
 				</p>
 				<p class="text-base leading-normal">
@@ -128,8 +130,8 @@
 					</a>
 				</p>
 			</article>
-			<article class="mx-[2rem] md:mx-1 py-5 my-2.5 flex-1 md:px-4">
-				<p class="mb-4 text-lg font-medium leading-normal text-center">
+			<article class="mx-[2rem] md:mx-1 px-2 py-8 flex-1 md:px-12 md:py-0 md:my-12">
+				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
 					From many sources to many targets
 				</p>
 				<p class="text-base leading-normal">
