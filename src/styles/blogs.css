@@ -1,0 +1,7 @@
+.apply-blog-base {
+  @apply md:w-[914px] md:px-0 px-2 sm:px-0 sm:w-[600px] py-6 min-h-full m-auto;
+}
+
+.apply-blog-block {
+  @apply px-8 md:px-12 py-4 border-black border-[1px] md:border-2;
+}

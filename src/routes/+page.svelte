@@ -1,4 +1,6 @@
 <script>
+	import '../styles/home.css';
+
 	import Dragonfly from './home-dragonfly.svelte';
 	import BenchmarkChart from './benchmark-chart.svelte';
 </script>
@@ -8,11 +10,9 @@
 </svelte:head>
 
 <!-- PART 1 -->
-<div
-	class="w-full px-4 xs:px-10 bg-background-dark selection:bg-background-light selection:text-background-dark font-code"
->
+<div class="px-4 apply-container-base xs:px-10 apply-selection font-code">
 	<div
-		class="w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px] md:p-0 p-3.5 pb-10 mx-auto bg-background-dark border-x-2 border-b-2 border-background-light md:h-[550px]"
+		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-x-2 border-b-2 border-background-light md:h-[550px]"
 	>
 		<div class="relative">
 			<div
@@ -35,14 +35,14 @@
 			>
 				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
 					<div
-						class="relative flex items-center justify-center w-full p-2 mb-4 text-base text-white border-2 cursor-pointer select-none border-background-light hover:bg-background-light hover:text-background-dark md:w-[149px]"
+						class="apply-button-base apply-border relative mb-4 text-white hover:bg-background-light hover:text-background-dark md:w-[149px]"
 					>
 						Read Docs
 					</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
-						class="p-2 border-2 border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-base bg-[#EF6A21] select-none md:w-[149px]"
+						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px]"
 					>
 						Example
 					</div>
@@ -62,16 +62,14 @@
 	</div>
 
 	<div
-		class="w-full p-[28px] sm:w-[600px] md:w-[1000px] lg:w-[1200px] h-[64px] mx-auto bg-background-dark border-x-2 border-background-light"
+		class=" p-[28px] apply-container-responsive h-[64px] apply-container-base border-x-2 border-background-light"
 	></div>
 </div>
 
 <div
 	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
-	<div
-		class="relative flex flex-col min-h-screen mx-auto w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px]"
-	>
+	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
 		<!-- PART 2 -->
 		<div class="mt-5 mb-20 md:columns-2">
 			<div class="flex flex-col border border-background-dark">
@@ -106,22 +104,18 @@
 
 		<div class="flex flex-col md:flex-row border border-background-dark max-w-[1194px] mx-auto">
 			<article
-				class="border-b md:border-r md:border-b-0 border-dashed border-background-dark mx-[2rem] md:mx-1 px-2 py-8 flex-1 md:px-6 md:my-12 lg:px-12 lg:my-12 md:py-0"
+				class="border-b border-dashed apply-article-base md:border-r md:border-b-0 border-background-dark"
 			>
-				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
-					Vendor lock-in free
-				</p>
+				<p class="apply-heading">Vendor lock-in free</p>
 				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
 			<article
-				class="border-dashed md:border-b-0 border-b md:border-r border-background-dark mx-[2rem] md:mx-1 px-2 py-8 md:py-0 flex-1 md:px-12 md:my-12"
+				class="border-b border-dashed apply-article-base md:border-b-0 md:border-r border-background-dark"
 			>
-				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
-					Combine agility of KV and convinient of structured
-				</p>
+				<p class="apply-heading">Combine agility of KV and convinient of structured</p>
 				<p class="text-base leading-normal">
 					Thanks to Rust lifetime, type system and asynchronous, Tonbo allows user to save each
 					overhead as need with safety: raw data reference, compile-time declared schema, and so on.
@@ -135,10 +129,8 @@
 					</a>
 				</p>
 			</article>
-			<article class="mx-[2rem] md:mx-1 px-2 py-8 flex-1 md:px-12 md:py-0 md:my-12">
-				<p class="mb-4 text-lg font-medium leading-normal text-center md:text-2xl">
-					From many sources to many targets
-				</p>
+			<article class="apply-article-base">
+				<p class="apply-heading">From many sources to many targets</p>
 				<p class="text-base leading-normal">
 					As an embedded database, Tonbo supports customizing runtime and file system, and also it
 					is designed for running on kinds of target platforms, we will complete official support

@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import '../styles/layout.css';
 	import Navigator from './navigator.svelte';
 	import HomeNavigator from './home-navigator.svelte';
 	import { page } from '$app/stores';
@@ -7,13 +8,9 @@
 
 <div class=" bg-background-dark">
 	{#if $page.url.pathname === '/'}
-		<HomeNavigator
-			class="font-code py-10 h-[183px] lg:h-[103px] md:h-[103px] w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px] mx-auto flex justify-between bg-background-dark pt-[2rem] pb-[2rem] flex-col sm:flex-row relative"
-		/>
+		<HomeNavigator class="apply-navigator-base apply-navigator-responsive apply-home-navigator" />
 	{:else}
-		<Navigator
-			class="font-code px-8 w-full h-[151px] sm:w-[600px] md:h-[116px] md:w-[1000px] lg:w-[1200px] mx-auto flex justify-between bg-background-dark pt-[2rem] pb-[2rem] flex-col sm:flex-row relative"
-		/>
+		<Navigator class="apply-navigator-base apply-navigator-responsive apply-regular-navigator" />
 	{/if}
 </div>
 
