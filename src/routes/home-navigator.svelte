@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<div
-		class="w-fit z-10 h-[45px] border-l-[1rem] border-r-[1rem] border-background-dark bg-background-dark selection:bg-background-light selection:text-background-dark relative mt-[10px]"
+		class="w-fit z-10 h-[45px] border-l-[1rem] border-r-[1rem] border-background-dark bg-background-dark selection:bg-background-light selection:text-background-dark relative ml-6 xs:ml-12 sm:ml-0"
 	>
 		<a href="/"><Tonbo /></a>
 	</div>
