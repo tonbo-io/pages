@@ -1,12 +1,7 @@
-<script>
-	export let size = '0.8';
-	export let overallScale = '1';
-</script>
-
-<div style="transform: scale({overallScale});">
+<div class="flex items-center justify-center overflow-hidden">
 	<pre
-		class="font-code origin-bottom leading-[1.25] text-tonbo-red bg-background-light"
-		style="transform: scaleY({size})">██████████████████████████
+		class="font-mono text-[4px] leading-none m-0 p-0 whitespace-pre origin-center transform scale-[var(--scale-factor)] high-dpi:scale-[calc(var(--scale-factor)*2)] ultra-dpi:scale-[calc(var(--scale-factor)*3)] font-code text-tonbo-red bg-background-light">
+██████████████████████████
 ██████████████████████████
 ██████████████████████████
 ██████████████████████████
@@ -17,6 +12,20 @@
 ▄▄       ▀████████████████
  ▀██▄▄     ▀████▀█████████
    ▀▀███▄▄   ███▀▀█▄████▀▀
-       ▀▀███▄▄█  ███▀▀&nbsp;&nbsp;&nbsp;&nbsp;
+       ▀▀███▄▄█  ███▀▀   
 ██▄▄▄▄     ▄█▀ ▄██▄▄▄     </pre>
 </div>
+
+<style>
+	@media (min-resolution: 2dppx) {
+		pre {
+			--scale-factor: 2;
+		}
+	}
+
+	@media (min-resolution: 3dppx) {
+		pre {
+			--scale-factor: 3;
+		}
+	}
+</style>

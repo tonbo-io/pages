@@ -1,5 +1,5 @@
 <script>
-	import Dragonfly from './dragonfly.svelte';
+	import Dragonfly from './home-dragonfly.svelte';
 	import BenchmarkChart from './benchmark-chart.svelte';
 </script>
 
@@ -33,14 +33,14 @@
 			<div
 				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute lg:right-[226px] md:right-[126px] md:bottom-0"
 			>
-				<a href="https://docs.rs/tonbo/latest/tonbo/">
+				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
 					<div
 						class="relative flex items-center justify-center w-full p-2 mb-4 text-base text-white border-2 cursor-pointer select-none border-background-light hover:bg-background-light hover:text-background-dark md:w-[149px]"
 					>
 						Read Docs
 					</div>
 				</a>
-				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples">
+				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
 						class="p-2 border-2 border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-base bg-[#EF6A21] select-none md:w-[149px]"
 					>
@@ -49,9 +49,14 @@
 				</a>
 			</div>
 			<div
-				class="w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-[-12px] sm:right-20 md:left-[240px] md:top-[260px]"
+				class="xs:block w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-4 xs:bottom-[-22px] sm:right-20 md:left-[240px] md:top-[260px]"
 			>
-				<Dragonfly verticalScale="1" overallScale={1} />
+				<Dragonfly />
+			</div>
+			<div
+				class="hidden sm:block w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-[-12px] sm:right-20 md:left-[240px] md:top-[260px]"
+			>
+				<Dragonfly />
 			</div>
 		</div>
 	</div>
