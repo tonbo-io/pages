@@ -1,7 +1,7 @@
 <script>
 	import '../styles/home.css';
 
-	import Dragonfly from './home-dragonfly.svelte';
+	import Dragonfly from './dragonfly.svelte';
 	import BenchmarkChart from './benchmark-chart.svelte';
 </script>
 
@@ -49,14 +49,9 @@
 				</a>
 			</div>
 			<div
-				class="xs:block w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-4 xs:bottom-[-22px] sm:right-20 md:left-[240px] md:top-[260px]"
+				class="w-fit h-fit mt-[-130px] absolute right-0 md:absolute top-[-5px] xs:bottom-[-22px] sm:right-20 md:left-[240px] md:top-[260px]"
 			>
-				<Dragonfly />
-			</div>
-			<div
-				class="hidden sm:block w-fit h-fit mt-[-130px] absolute right-0 md:absolute bottom-[-12px] sm:right-20 md:left-[240px] md:top-[260px]"
-			>
-				<Dragonfly />
+				<Dragonfly class="text-[14px] sm:text-[16px] md:text-[17px]" />
 			</div>
 		</div>
 	</div>
