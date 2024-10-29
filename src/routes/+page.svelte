@@ -66,7 +66,7 @@
 >
 	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
 		<!-- PART 2 -->
-		<div class="mt-5 mb-20 md:columns-2">
+		<div class="max-w-[1194px] mt-5 mb-20 md:columns-2 mx-auto w-full">
 			<div class="flex flex-col border border-background-dark">
 				<div
 					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"

@@ -36,7 +36,7 @@
 		width: 100%;
 		max-width: 600px;
 		margin: 0 auto;
-		padding: 10px;
+		padding: 20px;
 		box-sizing: border-box;
 	}
 	.chart-row {

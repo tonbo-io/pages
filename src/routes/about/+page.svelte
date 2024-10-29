@@ -38,6 +38,10 @@
 							Zeren Li:
 							<a class="underline" href="mailto: lizeren@tonbo.io"> lizeren@tonbo.io</a>
 						</p>
+						<p>
+							Ruiwen Cheng:
+							<a class="underline" href="mailto: lizeren@tonbo.io"> chengruiwen@tonbo.io</a>
+						</p>
 					</div>
 				</div>
 				<h1 class="py-4 text-2xl border-dashed md:text-xl">Credits</h1>
