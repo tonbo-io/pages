@@ -14,15 +14,17 @@
 			<PageHeader title="Tonbo’s Blogs" />
 		</div>
 
-		<div class="apply-blog-base">
+		<!-- <div class="apply-blog-base">
 			<div class="apply-blog-block">
-				<h1 class="mb-4 text-2xl">Intorucing Tonbo</h1>
+				<a href="/blog/introducing-tonbo"
+					><h1 class="mb-4 text-2xl underline">Intorucing Tonbo</h1></a
+				>
 				<div class="flex flex-col md:flex-row">
-					<!-- <img
+					<img
 						class="mb-6 md:mr-4"
 						src="https://i.makeagif.com/media/1-16-2015/Oaghjm.gif"
 						alt=""
-					/> -->
+					/>
 					<div>
 						<p>
 							We’re excited to announce that Tonbo is now open source in its preview version! Tonbo
@@ -36,25 +38,27 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<!-- <div class="apply-blog-base">
+		<div class="apply-blog-base">
 			<div class="apply-blog-block">
-				<h1 class="mb-4 text-2xl">Movable tree CRDTs and Loro's implementation</h1>
+				<a href="/blog/introducing-tonbo"
+					><h1 class="mb-4 text-4xl underline">Intorucing Tonbo</h1></a
+				>
 				<div class="flex flex-col md:flex-row">
 					<div>
 						<p>
-							This article introduces the implementation difficulties and challenges of Movable Tree
-							CRDTs when collaboration, and how Loro implements it and sorts child nodes. The
-							algorithm has high performance and can be used in production. <a
-								class="underline"
-								href="/blog/introducing-tonbo">Read more →</a
-							>
+							We’re excited to announce that Tonbo is now open source in its preview version! Tonbo
+							is an embedded persistent database written in Rust. It provides essential KV-like
+							methods: insert, filter, and range scan, making it a foundation for data-intensive
+							applications, including other types of databases. It also supports type-safe
+							structured data storage. For Rust developers, we offer an ORM-like macro for ease of
+							use... <a class="underline" href="/blog/introducing-tonbo">Read more →</a>
 						</p>
 						<p class="text-[#6A6B54] mt-4 text-xs">2024/07/18</p>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </div>

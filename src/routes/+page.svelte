@@ -35,14 +35,14 @@
 			>
 				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
 					<div
-						class="apply-button-base apply-border relative mb-4 text-white hover:bg-background-light hover:text-background-dark md:w-[149px]"
+						class="apply-button-base apply-border relative mb-4 text-white hover:bg-background-light hover:text-background-dark md:w-[149px] text-[1.5rem]"
 					>
 						Read Docs
 					</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
-						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px]"
+						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px] text-[1.5rem]"
 					>
 						Example
 					</div>
@@ -57,7 +57,7 @@
 	</div>
 
 	<div
-		class=" p-[28px] apply-container-responsive h-[64px] apply-container-base border-x-2 border-background-light"
+		class=" p-[42px] apply-container-responsive h-[64px] apply-container-base border-x-2 border-background-light"
 	></div>
 </div>
 
@@ -66,7 +66,7 @@
 >
 	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
 		<!-- PART 2 -->
-		<div class="max-w-[1194px] mt-5 mb-20 md:columns-2 mx-auto w-full">
+		<div class="max-w-[1194px] mt-5 mb-5 md:columns-2 mx-auto w-full">
 			<div class="flex flex-col border border-background-dark">
 				<div
 					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
