@@ -75,7 +75,9 @@
 				</div>
 				<BenchmarkChart />
 			</div>
-			<article class="md:h-[23rem] mt-5 flex flex-col justify-center md:ml-[4rem] md:mr-[2rem]">
+			<article
+				class="md:h-[23rem] mt-5 flex flex-col justify-center md:ml-[4rem] md:mr-[2rem] p-[20px]"
+			>
 				<p class="text-[1.5rem] mb-[1rem] font-semibold text-center md:text-left">
 					2.2x faster than RocksDB
 				</p>

@@ -55,7 +55,28 @@
 							structured data storage. For Rust developers, we offer an ORM-like macro for ease of
 							use... <a class="underline" href="/blog/introducing-tonbo">Read more →</a>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/07/18</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2024/08/14</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="apply-blog-base">
+			<div class="apply-blog-block">
+				<a href="/blog/async-rust-is-not-safe-with-io-uring"
+					><h1 class="mb-4 text-4xl underline">Async Rust is not safe with io_uring</h1></a
+				>
+				<div class="flex flex-col md:flex-row">
+					<div>
+						<p>
+							Barbara had a lot of experience developing web services with async Rust. One day, she
+							read a blog about io_uring, which described it as the next-generation async I/O
+							interface for Linux. Interested, Barbara decided to try it out in her sidecar web
+							service...  <a class="underline" href="/blog/async-rust-is-not-safe-with-io-uring"
+								>Read more →</a
+							>
+						</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2024/08/14</p>
 					</div>
 				</div>
 			</div>
