@@ -1,95 +1,86 @@
 <script>
+	import '../styles/home.css';
+
 	import Dragonfly from './dragonfly.svelte';
-	import GitHubLogo from '$lib/images/github-logo.svg';
+	import BenchmarkChart from './benchmark-chart.svelte';
 </script>
 
 <svelte:head>
 	<title>Tonbo - an extensible embedded database using Arrow.</title>
 </svelte:head>
 
-<div
-	class="bg-background-dark min-w-[75rem] pt-12 flex selection:bg-background-light selection:text-background-dark font-code"
->
+<!-- PART 1 -->
+<div class="px-4 apply-container-base xs:px-10 apply-selection font-code">
 	<div
-		class="w-[75rem] mx-auto border-l border-r border-t relative border-background-light flex flex-col pb-[6rem]"
+		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-x-2 border-b-2 border-background-light md:h-[550px]"
 	>
-		<div class="mt-[3rem] text-font-light border-b border-background-light flex">
-			<article
-				class="w-[16.5rem] ml-[2rem] text-background-light text-[1.5rem] -mr-[4rem] leading-[1.5rem]"
+		<div class="relative">
+			<div
+				class="hidden border-b-[1px] md:block border-background-light text-background-light px-10"
 			>
-				<p>
-					Tonbo incurs minimal cost for inserting and scanning structured data via Apache Arrow.
-				</p>
-			</article>
-			<div class="w-[46rem] h-[33rem] mb-[3rem] flex flex-col justify-between">
-				<div class="flex justify-end mt-[4rem] -mb-[20rem]">
-					<div
-						class="w-[36rem] h-[22rem] border text-[3.5rem] border-background-light flex items-center justify-center"
-					>
-						<div
-							class="w-[26rem] leading-[4.5rem] h-[19.75rem] flex items-center justify-center mb-[1rem] ml-[1rem]"
-						>
-							A portable embedded database using Arrow.
-						</div>
-					</div>
+				<div class="md:w-[16.5rem] md:text-[1.5rem] -mr-[4rem] md:leading-[1.5rem] pb-6">
+					Tonbo incurrs minimal cost to insert and scan structured data.
 				</div>
+			</div>
+			<div
+				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[588px] lg:h-[361px] md:w-[488px] md:h-[361px] text-[#FFFDEC] p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
+			>
+				A portable embedded database using Arrow.
+			</div>
+		</div>
 
-				<div class="flex items-end justify-between z-10">
-					<Dragonfly />
-					<div class="flex">
-						<a href="https://github.com/tonbo-io/tonbo">
-							<div
-								class=" h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light hover:text-background-dark cursor-pointer relative text-[1.5rem] mr-[2rem] select-none pl-[1rem] pr-[1rem] group"
-							>
-								<img src={GitHubLogo} alt="GitHub Logo" class="group-hover:invert w-[1.5rem]" />
-								<p>&nbsp;Star Us</p>
-							</div>
-						</a>
-						<a href="https://github.com/tonbo-io/tonbo/tree/main/examples">
-							<div
-								class="h-[3rem] border border-background-light flex items-center justify-center hover:bg-background-light text-background-dark cursor-pointer relative text-[1.5rem] bg-tonbo-red select-none pl-[1rem] pr-[1rem]"
-							>
-								Example
-							</div>
-						</a>
+		<div class="relative md:h-[449px]">
+			<div
+				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute lg:right-[226px] md:right-[126px] md:bottom-0"
+			>
+				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
+					<div
+						class="apply-button-base apply-border relative mb-4 text-white hover:bg-background-light hover:text-background-dark md:w-[149px] text-[1.5rem]"
+					>
+						Read Docs
 					</div>
-				</div>
+				</a>
+				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
+					<div
+						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px] text-[1.5rem]"
+					>
+						Example
+					</div>
+				</a>
+			</div>
+			<div
+				class="w-fit h-fit mt-[-130px] absolute right-0 md:absolute top-[-5px] xs:bottom-[-22px] sm:right-20 md:left-[240px] md:top-[260px]"
+			>
+				<Dragonfly class="text-[14px] sm:text-[16px] md:text-[17px]" />
 			</div>
 		</div>
 	</div>
+
+	<div
+		class=" p-[42px] apply-container-responsive h-[64px] apply-container-base border-x-2 border-background-light"
+	></div>
 </div>
 
 <div
-	class=" bg-background-light min-w-[75rem] selection:bg-background-dark selection:text-background-light font-code"
+	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
-	<div class="min-h-screen w-[75rem] mx-auto relative flex flex-col">
-		<div class="columns-2 mt-[3rem] mb-[6rem]">
-			<div class="border border-background-dark flex flex-col h-[23rem]">
+	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
+		<!-- PART 2 -->
+		<div class="max-w-[1194px] mt-5 mb-5 md:columns-2 mx-auto w-full">
+			<div class="flex flex-col border border-background-dark">
 				<div
 					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
 				>
 					Benchmark: range performance
 				</div>
-				<pre
-					class="font-code ml-[2rem] mr-[2rem] mt-[1.5rem] leading-[1.3rem] text-background-dark">
-<code class="font-meium">Random range read with column projection:</code>
-╔═══════════════════════════════════════════════════════════════╗
-║                                                               ║
-║      Tonbo | █████████▓▒                          |  1666ms   ║
-║    RocksDB | ██████████████████████▓▒             |  3689ms   ║
-║       Sled | ███████████████████████▓▒            |  3837ms   ║
-║                                                               ║
-╚═══════════════════════════════════════════════════════════════╝
-(lower is better)                                 Latency (pct99)
-				</pre>
-				<pre class="ml-[2rem] font-code text-[0.75rem]">
-CPU: AMD EPYC 7H12
-RAM: 64GB DDR4 2933MHz * 8
-DISK: SamSung 970 EVO Plus 4TB
-				</pre>
+				<BenchmarkChart />
 			</div>
-			<article class="h-[23rem] flex flex-col justify-center ml-[4rem] mr-[2rem]">
-				<p class="text-[1.5rem] mb-[1rem]">2.2x faster than RocksDB</p>
+			<article
+				class="md:h-[23rem] mt-5 flex flex-col justify-center md:ml-[4rem] md:mr-[2rem] p-[20px]"
+			>
+				<p class="text-[1.5rem] mb-[1rem] font-semibold text-center md:text-left">
+					2.2x faster than RocksDB
+				</p>
 				<p class="text-[1rem]">
 					Because of Tonbo's native support for structured data zero-copy loading and projection
 					pushing down, Tonbo is 2.2x faster than RocksDB.
@@ -101,46 +92,48 @@ DISK: SamSung 970 EVO Plus 4TB
 			</article>
 		</div>
 
+		<!-- PART 3 -->
 		<div
-			class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
+			class="bg-background-dark h-14 text-font-light flex items-center justify-center text-base sm:text-[1.5rem] selection:bg-background-light selection:text-background-dark max-w-[1194px] mx-auto w-full"
 		>
 			Just Arrow, Structured, Portable
 		</div>
-		<div class="border border-background-dark flex">
-			<article class="border-r border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">Vendor lock-in free</p>
-				<p class="text-[1rem]">
+
+		<div class="flex flex-col md:flex-row border border-background-dark max-w-[1194px] mx-auto">
+			<article
+				class="border-b border-dashed apply-article-base md:border-r md:border-b-0 border-background-dark"
+			>
+				<p class="apply-heading">Vendor lock-in free</p>
+				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
-			<article class=" border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">Combine agility of KV and convinient of structured</p>
-				<p class="text-[1rem]">
+			<article
+				class="border-b border-dashed apply-article-base md:border-b-0 md:border-r border-background-dark"
+			>
+				<p class="apply-heading">Combine agility of KV and convinient of structured</p>
+				<p class="text-base leading-normal">
 					Thanks to Rust lifetime, type system and asynchronous, Tonbo allows user to save each
 					overhead as need with safety: raw data reference, compile-time declared schema, and so on.
 					And push-down support makes it convenient to query structured data:
 					<a
 						href="https://github.com/tonbo-io/tonbo/blob/main/examples/datafusion.rs"
 						class="underline"
+						target="_blank"
 					>
 						just about several minutes coding to be integrated into SQL engine for example.
 					</a>
 				</p>
 			</article>
-			<article class="border-l border-background-dark p-[2rem] flex-1">
-				<p class="text-[1.5rem] mb-[1rem]">From many sources to many targets</p>
-				<p class="text-[1rem]">
+			<article class="apply-article-base">
+				<p class="apply-heading">From many sources to many targets</p>
+				<p class="text-base leading-normal">
 					As an embedded database, Tonbo supports customizing runtime and file system, and also it
 					is designed for running on kinds of target platforms, we will complete official support
 					WASM / OPFS, Python asyncio and object storages in Sep 2024.
 				</p>
 			</article>
-		</div>
-		<div
-			class="h-[4rem] flex items-center justify-center text-center text-background-dark border-t border-background-dark mt-[6rem]"
-		>
-			© Copyright 2024-, Tonbo IO.
 		</div>
 	</div>
 </div>
