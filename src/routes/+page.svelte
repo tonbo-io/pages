@@ -6,26 +6,27 @@
 </script>
 
 <svelte:head>
-	<title>Tonbo - an extensible embedded database using Arrow.</title>
+	<title>Tonbo - an extensible embedded database supports object storage.</title>
 </svelte:head>
 
 <!-- PART 1 -->
 <div class="px-4 apply-container-base xs:px-10 apply-selection font-code">
 	<div
-		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-x-2 border-b-2 border-background-light md:h-[550px]"
+		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-x-2 border-b-2 border-background-light md:min-h-[620px]"
 	>
 		<div class="relative">
 			<div
 				class="hidden border-b-[1px] md:block border-background-light text-background-light px-10"
 			>
-				<div class="md:w-[16.5rem] md:text-[1.5rem] -mr-[4rem] md:leading-[1.5rem] pb-6">
-					Tonbo incurrs minimal cost to insert and scan structured data.
+				<div class="md:w-[16.5rem] md:text-[1rem] -mr-[4rem] md:leading-[1.5rem] pb-6">
+					Tonbo, an embedded database, supports data storage on local disks and S3 for querying
+					anywhere with Apache Arrow and Parquet.
 				</div>
 			</div>
 			<div
-				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[588px] lg:h-[361px] md:w-[488px] md:h-[361px] text-[#FFFDEC] p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
+				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[588px] lg:min-h-[361px] md:w-[488px] md:min-h-[361px] text-font-light p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
 			>
-				A portable embedded database using Arrow.
+				The simplest path to shared data storage.
 			</div>
 		</div>
 
@@ -35,14 +36,14 @@
 			>
 				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
 					<div
-						class="apply-button-base apply-border relative mb-4 text-white hover:bg-background-light hover:text-background-dark md:w-[149px] text-[1.5rem]"
+						class="apply-button-base apply-border relative mb-4 text-font-light hover:bg-background-light hover:text-background-dark md:w-[149px]"
 					>
 						Read Docs
 					</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
-						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px] text-[1.5rem]"
+						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px]"
 					>
 						Example
 					</div>
@@ -65,6 +66,14 @@
 	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
 	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
+		<div class="bg-[#EF6A21] min-h-[4rem] flex items-center justify-center">
+			<a
+				class="font-code text-[1.5rem] text-font-light underline"
+				href="https://github.com/tonbo-io/tonbo/releases/tag/0.2.0"
+			>
+				New Version is comming! Tonbo supports storage on S3 and Python binding.
+			</a>
+		</div>
 		<!-- PART 2 -->
 		<div class="max-w-[1194px] mt-5 mb-5 md:columns-2 mx-auto w-full">
 			<div class="flex flex-col border border-background-dark">

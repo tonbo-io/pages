@@ -250,10 +250,10 @@ drop(block);
 				>
 				<a href="https://github.com/bytedance/monoio" class="underline">monoio,</a>
 				and
-				<a href="https://github.com/compio-rs/compio" class="underline">compio</a>compio that
-				supported io_uring. She decided to give one of them a try—monoio, in particular, which
-				provided both epoll and io_uring interfaces and allowed for easy switching. It seemed like
-				the perfect fit for Barbara's io_uring exploration.
+				<a href="https://github.com/compio-rs/compio" class="underline">compio</a> that supported io_uring.
+				She decided to give one of them a try—monoio, in particular, which provided both epoll and io_uring
+				interfaces and allowed for easy switching. It seemed like the perfect fit for Barbara's io_uring
+				exploration.
 			</p>
 			<p class="mt-[1rem]">
 				With her familiarity with Tokio, Barbara quickly wrote her first HTTP server demo:
@@ -354,7 +354,8 @@ drop(block);
 			/>
 			<p class="mt-[1rem]">
 				For a more detailed explanation of futures and how they are executed, I recommend reading
-				ihciah's blog. He is one of the core authors of monoio.
+				<a href="https://en.ihcblog.com/rust-runtime-design-1/" class="underline">ihciah's blog.</a>
+				He is one of the core authors of monoio.
 			</p>
 			<p class="mt-[1rem]">Async Rust makes a few core assumptions about futures:</p>
 			<pre
@@ -435,8 +436,11 @@ drop(block);
 			<p class="mt-[1rem]">
 				Halt safety is more complicated. Monoio provides a component called "cancellable I/O" to
 				properly handle the cancellation of io_uring-bound futures. A complete example can be found
-				here: cancellable I/O example. You can run this branch to see that the connection handling
-				behavior now matches that of epoll. Here, I’ll show a simplified usage:
+				here: <a
+					href="https://github.com/ethe/io-uring-is-not-cancellation-safe/blob/cancelable-io/src/main.rs"
+					class="underline">cancellable I/O example.</a
+				> You can run this branch to see that the connection handling behavior now matches that of epoll.
+				Here, I’ll show a simplified usage:
 			</p>
 			<CodeBlock
 				language="rust"
@@ -479,8 +483,10 @@ drop(block);
 				future, there are no compile-time checks to catch it. For io_uring-bound futures, you need
 				to ".await" them after cancellation to see if they have completed. This means they must be
 				<b class="font-medium">used exactly once,</b>
-				a concept called [linear types](https://en.wikipedia.org/wiki/Substructural_type_system), which
-				ensures correct usage of resources at compile time.
+				a concept called
+				<a href="https://en.wikipedia.org/wiki/Substructural_type_system" class="underline"
+					>linear types,</a
+				> which ensures correct usage of resources at compile time.
 			</p>
 			<p class="mt-[1rem]">
 				Unfortunately, Rust lacks the support for this kind of type system. For more details on why
@@ -516,9 +522,9 @@ drop(block);
 			<pre
 				class="break-words whitespace-pre-wrap font-code text-background-dark"> • Keep things as they are; I/O safety and halt safety do not need guarantees from the language.</pre>
 			<pre
-				class="break-words whitespace-pre-wrap font-code text-background-dark"> • Rust should ensure I/O safety (this is already a goal outlined in the RFC, but not yet implemented in Rust).</pre>
+				class="break-words whitespace-pre-wrap font-code text-background-dark"> • Rust should ensure I/O safety (this is already a goal outlined in the RFC, but not yet implemented in Rust.)</pre>
 			<pre
-				class="break-words whitespace-pre-wrap font-code text-background-dark"> • Rust should ensure halt safety (rarely discussed!).</pre>
+				class="break-words whitespace-pre-wrap font-code text-background-dark"> • Rust should ensure halt safety (rarely discussed!)</pre>
 		</article>
 	</div>
 </div>

@@ -20,7 +20,7 @@
 
 /* Button-like styles */
 .apply-button-base {
-  @apply flex items-center justify-center p-2 text-base cursor-pointer select-none;
+  @apply flex items-center justify-center p-2 text-[1.5rem] cursor-pointer select-none;
 }
 
 /* Article styles */

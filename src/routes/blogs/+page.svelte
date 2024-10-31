@@ -76,7 +76,7 @@
 								>Read more →</a
 							>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/08/14</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2024/10/30</p>
 					</div>
 				</div>
 			</div>

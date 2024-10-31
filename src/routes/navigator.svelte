@@ -42,7 +42,7 @@
 						<span class="hidden sm:block">GitHub</span>
 					</div>
 				</a>
-				<a href="https://discord.com/invite/8jm9WMfX">
+				<a href="https://discord.gg/j27XVFVmJM">
 					<div
 						type="button"
 						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
