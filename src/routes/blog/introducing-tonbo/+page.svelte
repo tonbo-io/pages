@@ -24,7 +24,7 @@ pub struct User {
 			class="w-full sm:w-[600px] md:w-[800px] mx-auto relative flex flex-col text-background-dark px-10 leading-[1.618] pb-[4rem] md:border-x-0 border-background-dark sm:px-0"
 		>
 			<div class="mt-10">
-				<h1 class="text-[2.5rem] font-medium">Intoducing Tonbo</h1>
+				<h1 class="text-[2.5rem] font-medium">Introducing Tonbo</h1>
 				<p class="text-[0.75rem] mb-[1rem]">August 14, 2024 by Tzu Gwo</p>
 			</div>
 			<p>
@@ -63,15 +63,15 @@ pub struct User {
 				Analytical tools in the <a href="https://arrow.apache.org/" class="underline"
 					>Apache Arrow</a
 				>
-				(such as
+				ecosystem (such as
 				<a href="https://github.com/apache/arrow-datafusion" class="underline"
 					>Apache Arrow DataFusion</a
-				> ecosystems provide an nice foundation for data processing. They get a great balance between
+				>) provide a nice foundation for data processing. They get a great balance between
 				scalability, development efficiency, and execution performance, allowing developers to build
 				efficient data analysis applications within days using DataFusion.
 			</p>
 			<p class="mt-[1rem]">
-				However, most tools are focus on the read path of databases. Every data-intensive
+				However, most tools focus on the read path of databases. Every data-intensive
 				application using DataFusion ends up spending significant time developing its own write path
 				implementation. What if we could have a write path implementation as agile and performant as
 				DataFusion?
@@ -82,7 +82,7 @@ pub struct User {
 				long-term goal: <b class="font-medium"
 					>provide offline-first distributed data storage capabilities, support rapid and flexible
 					data storage across various environments—from embedded Linux and browsers to servers—and
-					integrating with multiple storage systems such as file systems, OPFS, and S3.</b
+					integrate with multiple storage systems such as file systems, OPFS, and S3.</b
 				>
 			</p>
 			<div class="w-full max-w-full overflow-x-auto">
@@ -154,21 +154,21 @@ pub struct User {
 			</p>
 			<Structured />
 			<p class="mt-[2rem]">
-				This means that Tonbo can precisely scan the data specified by the use, and skipping
+				This means that Tonbo can precisely scan the data specified by the user, skipping
 				irrelevant data, leading to potentially more than tenfold improvements in querying
-				efficiency when used appropriately. Additionally, according to compile-time type hint, Tonbo
-				can transmute bytes read from files into user-defined data types free. In many
+				efficiency when used appropriately. Additionally, according to compile-time type hints, Tonbo
+				can transmute bytes read from files into user-defined data types for free. In many
 				data-intensive applications, serialization overhead can account for 30% to 50% of the total
 				load.
 			</p>
 			<h3 class="text-[1.1rem] font-medium mt-[1.1rem]">Asynchronous</h3>
-			<p>Tonbo fully supports asychronous methods:</p>
+			<p>Tonbo fully supports asynchronous methods:</p>
 			<Aschronous />
 			<p class="mt-[2rem]">
 				Using asynchronous interfaces not only increases the efficiency of concurrent operations,
 				but also allows Tonbo to provide concurrent access on resource-constrained devices, such as
 				browsers, mobile apps, and embedded Linux systems. The LSM Tree architecture, as mentioned
-				in previous sections, requires background tasks for garbage collection and compaction newly
+				in previous sections, requires background tasks for garbage collection and compaction of newly
 				written data, which can be challenging to implement in browsers since they cannot easily
 				start background tasks. By leveraging WASM and async Rust interfaces, we can build a
 				complete asynchronous task chain from OPFS to the JavaScript scheduler. In our upcoming blog
