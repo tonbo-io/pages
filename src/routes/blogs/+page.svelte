@@ -81,5 +81,28 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="apply-blog-base">
+			<div class="apply-blog-block">
+				<a href="/blog/threads-with-webassembly"
+					><h1 class="mb-4 text-4xl underline">Threads with WebAssembly</h1></a
+				>
+				<div class="flex flex-col md:flex-row">
+					<div>
+						<p>
+							Multi-threading is a cornerstone of modern programming, enabling applications to
+							handle multiple tasks simultaneously. While web browsers support concurrency through
+							the Web Workers API, WebAssembly (Wasm) still lacks built-in thread support.
+							Currently, threading in Wasm is part of an active proposal in Phase 4 (standardizing
+							the feature), as detailed in the WebAssembly specificcation. ...  <a
+								class="underline"
+								href="/blog/threads-with-webassembly">Read more →</a
+							>
+						</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2024/12/27</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
