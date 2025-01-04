@@ -66,14 +66,6 @@
 	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
 >
 	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
-		<div class="bg-[#EF6A21] min-h-[4rem] flex items-center justify-center">
-			<a
-				class="font-code text-[1.5rem] text-font-light underline"
-				href="https://github.com/tonbo-io/tonbo/releases/tag/0.2.0"
-			>
-				New Version is comming! Tonbo supports storage on S3 and Python binding.
-			</a>
-		</div>
 		<!-- PART 2 -->
 		<div class="max-w-[1194px] mt-5 mb-5 md:columns-2 mx-auto w-full">
 			<div class="flex flex-col border border-background-dark">

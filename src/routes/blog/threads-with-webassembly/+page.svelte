@@ -87,6 +87,11 @@ fn spawn(work: impl FnOnce() + Send + 'static) -> Result<Worker, JsValue> {
 				<h1 class="text-[2.5rem] font-medium">Threads with WebAssembly</h1>
 			</div>
 
+			<p class="text-[0.75rem] mb-[1rem]">
+				October 30, 2024 by <a href="mailto:chengruiwen@tonbo.io" class="underline">Rui-Wen Cheng</a
+				>
+			</p>
+
 			<p class="mt-[1rem]">
 				Multi-threading is a cornerstone of modern programming, enabling applications to handle
 				multiple tasks simultaneously. While web browsers support concurrency through the <a
