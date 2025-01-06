@@ -271,7 +271,7 @@ fn spawn(work: impl FnOnce() + Send + 'static) -> Result<Worker, JsValue> {
 					class="underline">Atomics.waitAsync</a
 				> that waits asynchronously on a shared memory location.
 			</p>
-			<h2 class="text-[1.6rem] font-medium mt-[1.6rem]">Thift-Party Implementation</h2>
+			<h2 class="text-[1.6rem] font-medium mt-[1.6rem]">Third-Party Implementation</h2>
 			<p class="mt-[1rem]">
 				If the aproach we discussed above is too complicated, there is a helpful crate, <a
 					href="https://github.com/chemicstry/wasm_thread/tree/main"
