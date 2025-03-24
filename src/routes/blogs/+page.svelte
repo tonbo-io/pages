@@ -123,7 +123,7 @@
 								href="/blog/exploring-better-async-rust-disk-io">Read more →</a
 							>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/12/27</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2025/3/24</p>
 					</div>
 				</div>
 			</div>

@@ -136,14 +136,16 @@
 				fastest fusio/tokio implementation. The primary bottleneck is the overhead of synchronizing
 				between the I/O-issuing thread and the thread-pool workers, as well as the additional seek
 				system calls. Using pread helps sidestep these extra system calls. On the other hand, monoio
-				(which leverages io_uring) achieves read/write efficiency close to what you’d get with
-				pwrite and read.
+				(which leverages io_uring) achieves read/write efficiency close to what you’d get with write
+				and pread.
 			</p>
 			<p class="mt-[1rem]">
-				In the compute workload scenarios, we also introduced Apache Opendal for further comparison.
-				Opendal is a popular Rust data access layer that supports a wide range of backends and usage
-				patterns. In the parquet_opendal implementation, it uses spawn_blocking + pwrite/read as the
-				I/O API under the hood.
+				In the compute workload scenarios, we also introduced <a
+					href="https://opendal.apache.org/"
+					class="underline">Apache Opendal</a
+				> for further comparison. Opendal is a popular Rust data access layer that supports a wide range
+				of backends and usage patterns. In the parquet_opendal implementation, it uses spawn_blocking
+				+ pwrite/read as the I/O API under the hood.
 			</p>
 			<pre class="mt-[1rem] text-[0.75rem]">
 											  random read (parquet)
