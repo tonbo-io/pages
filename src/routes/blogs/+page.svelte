@@ -43,7 +43,7 @@
 		<div class="apply-blog-base">
 			<div class="apply-blog-block">
 				<a href="/blog/introducing-tonbo"
-					><h1 class="mb-4 text-4xl underline">Intorucing Tonbo</h1></a
+					><h1 class="mb-4 text-4xl underline">Introducing Tonbo</h1></a
 				>
 				<div class="flex flex-col md:flex-row">
 					<div>
