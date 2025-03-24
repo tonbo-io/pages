@@ -104,5 +104,29 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="apply-blog-base">
+			<div class="apply-blog-block">
+				<a href="/blog/exploring-better-async-rust-disk-io"
+					><h1 class="mb-4 text-4xl underline">Exploring better async Rust disk I/O</h1></a
+				>
+				<div class="flex flex-col md:flex-row">
+					<div>
+						<p>
+							Rust’s asynchronous disk I/O efficiency is critically important to us because we’re
+							building a database called Tonbo in async Rust—a tiered-storage database that uses
+							memory, disk, and object storage layers on top of the Parquet format. However, as many
+							in the community have observed, async Rust’s disk I/O is not always ideal, largely
+							because fully asynchronous file I/O APIs are still relatively new on most mainstream
+							operating systems. ...  <a
+								class="underline"
+								href="/blog/exploring-better-async-rust-disk-io">Read more →</a
+							>
+						</p>
+						<p class="text-[#6A6B54] mt-4 text-xs">2024/12/27</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
