@@ -34,7 +34,7 @@
 			<div
 				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute lg:right-[226px] md:right-[126px] md:bottom-0"
 			>
-				<a href="https://docs.rs/tonbo/latest/tonbo/" target="_blank">
+				<a href="https://tonbo-io.github.io/tonbo/" target="_blank">
 					<div
 						class="apply-button-base apply-border relative mb-4 text-font-light hover:bg-background-light hover:text-background-dark md:w-[149px]"
 					>
