@@ -1,5 +1,6 @@
+/* Layout-specific styles */
 .apply-navigator-base {
-  @apply font-code w-full mx-auto flex justify-between bg-background-dark pt-[2rem] pb-[2rem] flex-col sm:flex-row relative;
+  @apply w-full mx-auto flex justify-between bg-background-dark pt-[2rem] pb-[2rem] flex-col sm:flex-row relative;
 }
 
 .apply-navigator-responsive {
@@ -12,4 +13,47 @@
 
 .apply-regular-navigator {
   @apply px-8 h-[151px] md:h-[116px];
+}
+
+/* Container styles */
+.apply-container-base {
+  @apply w-full mx-auto bg-background-dark max-w-[1200px];
+}
+
+.apply-container-responsive {
+  @apply w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px];
+}
+
+/* Responsive Utilities */
+.responsive-container {
+  @apply w-full px-4 xs:px-10;
+}
+
+/* Layout Utilities */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* Spacing Utilities */
+.space-y-tonbo {
+  @apply space-y-4;
+}
+
+/* Custom Components */
+.tonbo-header {
+  @apply m-auto flex w-full bg-background-dark h-[78px] items-center justify-center font-code relative;
+}
+
+.tonbo-navigation {
+  @apply absolute w-[calc(100%-2rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] h-[61px] border-2 md:border-b-0 border-background-light;
+  @apply left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0;
+}
+
+/* Footer styles */
+.tonbo-footer {
+  @apply bg-background-light w-full flex items-center justify-center;
+}
+
+.tonbo-footer-content {
+  @apply bg-background-light w-[340px] md:w-[1000px] lg:w-[1100px] mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code;
 }

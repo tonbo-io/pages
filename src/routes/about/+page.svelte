@@ -32,14 +32,10 @@
 					<div class="pb-6 border-b-2 border-black border-dashed sm:pr-20 sm:w-content">
 						<p>
 							Tzu Gwo:
-							<a class="underline" href="mailto: guozixing@tonbo.io">guozixing@tonbo.io</a>
+							<a class="underline" href="mailto: tzu@tonbo.io">tzu@tonbo.io</a>
 						</p>
 						<p>
-							Zeren Li:
-							<a class="underline" href="mailto: lizeren@tonbo.io"> lizeren@tonbo.io</a>
-						</p>
-						<p>
-							Ruiwen Cheng:
+							Rui-wen Cheng:
 							<a class="underline" href="mailto: lizeren@tonbo.io"> chengruiwen@tonbo.io</a>
 						</p>
 					</div>
@@ -76,7 +72,7 @@
 							an embedded key-value store in Rust, Tonbo built early stage benchmarks upon its
 							cases.
 						</li>
-						<p>
+						<p class="mt-4">
 							Also thanks to all of Tonbo's <a
 								href="https://github.com/tonbo-io/tonbo/graphs/contributors"
 								target="_blank"

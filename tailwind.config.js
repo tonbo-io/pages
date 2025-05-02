@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [ './src/**/*.{html,js,svelte,ts}', './node_modules/svhighlight/**/*.svelte' ],
+  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/svhighlight/**/*.svelte'],
   theme: {
     extend: {
       screens: {
@@ -14,13 +14,14 @@ export default {
         "background-light": "#E7F1BE",
         "font-light": "#FFFDEC",
         "tonbo-red": "#EF6A21",
+        "tonbo-accent": "#EF6A21",
       },
       width: {
       }
     },
     fontFamily: {
-      code: [ "Iosevka Web", "monospace" ],
-      medium: [ "Iosevka Web Medium", "monospace" ],
+      code: ["Iosevka Web", "monospace"],
+      medium: ["Iosevka Web Medium", "monospace"],
     },
   },
   plugins: [],

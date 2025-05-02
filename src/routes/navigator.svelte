@@ -6,61 +6,32 @@
 </script>
 
 <nav class={$$props.class}>
-	<div
-		class="absolute w-[calc(100%-2rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] h-[61px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 bottom-[39px] md:bottom-0"
-	>
+	<div class="tonbo-navigation">
 		<div class="mt-[68px] relative w-full">
 			<div
 				class="absolute bottom-0 md:bottom-[52px] z-10 flex order-last right-[10px] bg-background-dark"
 			>
 				<a href="/blogs">
-					<div
-						type="button"
-						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
-					>
-						Blogs
-					</div>
+					<div type="button" class="nav-button">Blogs</div>
 				</a>
 				<a href="/about">
-					<div
-						type="button"
-						class="relative flex items-center justify-center h-8 px-1.5 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark hover:bg-background-light hover:text-background-dark"
-					>
-						About
-					</div>
+					<div type="button" class="nav-button">About</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo">
-					<div
-						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-					>
-						<img
-							src={GitHubLogo}
-							alt="GitHub Logo"
-							class="max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert"
-						/>
+					<div type="button" class="nav-button-social group">
+						<img src={GitHubLogo} alt="GitHub Logo" class="nav-button-icon" />
 						<span class="hidden sm:block">GitHub</span>
 					</div>
 				</a>
 				<a href="https://discord.gg/j27XVFVmJM">
-					<div
-						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-					>
-						<img
-							src={DiscordLogo}
-							alt="Discord Logo"
-							class="max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert"
-						/>
+					<div type="button" class="nav-button-social group">
+						<img src={DiscordLogo} alt="Discord Logo" class="nav-button-icon" />
 						<span class="hidden sm:block">Discord</span>
 					</div>
 				</a>
 				<a href="https://x.com/tonboio">
-					<div
-						type="button"
-						class="relative flex items-center justify-center h-8 px-2 mx-1.5 border cursor-pointer select-none sm:px-4 border-background-light text-font-light bg-background-dark group hover:bg-background-light hover:text-background-dark"
-					>
-						<img src={XLogo} alt="X Logo" class="max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert" />
+					<div type="button" class="nav-button-social group">
+						<img src={XLogo} alt="X Logo" class="nav-button-icon-x" />
 						<span class="hidden sm:block">X</span>
 					</div>
 				</a>

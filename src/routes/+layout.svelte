@@ -1,25 +1,26 @@
 <script>
 	import '../app.css';
 	import '../styles/layout.css';
+	import '../styles/tonbo.css';
 	import Navigator from './navigator.svelte';
 	import HomeNavigator from './home-navigator.svelte';
 	import { page } from '$app/stores';
 </script>
 
-<div class=" bg-background-dark">
+<div class="bg-background-dark">
 	{#if $page.url.pathname === '/'}
-		<HomeNavigator class="apply-navigator-base apply-navigator-responsive apply-home-navigator" />
+		<HomeNavigator
+			class="apply-navigator-base apply-navigator-responsive apply-home-navigator font-code"
+		/>
 	{:else}
-		<Navigator class="apply-navigator-base apply-navigator-responsive apply-regular-navigator" />
+		<Navigator
+			class="apply-navigator-base apply-navigator-responsive apply-regular-navigator font-code"
+		/>
 	{/if}
 </div>
 
 <slot />
 
-<div class="bg-[#E7F1BE] w-full flex items-center justify-center">
-	<div
-		class="bg-[#E7F1BE] w-[340px] md:w-[1000px] lg:w-[1100px] mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code"
-	>
-		© Copyright 2024-, Tonbo IO.
-	</div>
+<div class="tonbo-footer">
+	<div class="tonbo-footer-content">© Copyright 2024-, Tonbo IO Inc.</div>
 </div>

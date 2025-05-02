@@ -1,5 +1,5 @@
 <script>
-	import '../styles/home.css';
+	import '../styles/tonbo.css';
 
 	import Dragonfly from './dragonfly.svelte';
 	import BenchmarkChart from './benchmark-chart.svelte';
@@ -10,11 +10,11 @@
 </svelte:head>
 
 <!-- PART 1 -->
-<div class="px-4 apply-container-base xs:px-10 apply-selection font-code">
+<div class="responsive-container apply-selection font-code bg-background-dark">
 	<div
-		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-x-2 border-b-2 border-background-light md:min-h-[620px]"
+		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-tonbo md:min-h-[620px]"
 	>
-		<div class="relative">
+		<div class="relative apply-selection-light">
 			<div
 				class="hidden border-b-[1px] md:block border-background-light text-background-light px-10"
 			>
@@ -36,14 +36,14 @@
 			>
 				<a href="https://tonbo-io.github.io/tonbo/" target="_blank">
 					<div
-						class="apply-button-base apply-border relative mb-4 text-font-light hover:bg-background-light hover:text-background-dark md:w-[149px]"
+						class="apply-button-base apply-border relative mb-4 text-font-light hover-tonbo md:w-[149px]"
 					>
 						Read Docs
 					</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
-						class="apply-button-base apply-border relative hover:bg-background-light text-background-dark bg-[#EF6A21] md:w-[149px]"
+						class="apply-button-base apply-border relative hover-tonbo text-background-dark bg-tonbo-red md:w-[149px]"
 					>
 						Example
 					</div>
@@ -57,23 +57,15 @@
 		</div>
 	</div>
 
-	<div
-		class=" p-[42px] apply-container-responsive h-[64px] apply-container-base border-x-2 border-background-light"
-	></div>
+	<div class="p-[42px] apply-container-responsive h-[64px] apply-container-base border-tonbo"></div>
 </div>
 
-<div
-	class="p-4 xs:px-10 bg-background-light selection:bg-background-dark selection:text-background-light font-code"
->
+<div class="p-4 xs:px-10 bg-background-light apply-selection font-code">
 	<div class="relative flex flex-col w-full min-h-screen mx-auto apply-container-responsive">
 		<!-- PART 2 -->
 		<div class="max-w-[1194px] mt-5 mb-5 md:columns-2 mx-auto w-full">
 			<div class="flex flex-col border border-background-dark">
-				<div
-					class="bg-background-dark h-[3.5rem] text-font-light flex items-center justify-center text-[1.5rem] selection:bg-background-light selection:text-background-dark"
-				>
-					Benchmark: range performance
-				</div>
+				<div class="benchmark-header">Benchmark: range performance</div>
 				<BenchmarkChart />
 			</div>
 			<article
@@ -87,32 +79,26 @@
 					pushing down, Tonbo is 2.2x faster than RocksDB.
 				</p>
 				<p>
-					We’re just getting started with commonly used async executors and file system
-					implementations, there’s still plenty of room for further optimizations.
+					We're just getting started with commonly used async executors and file system
+					implementations, there's still plenty of room for further optimizations.
 				</p>
 			</article>
 		</div>
 
 		<!-- PART 3 -->
-		<div
-			class="bg-background-dark h-14 text-font-light flex items-center justify-center text-base sm:text-[1.5rem] selection:bg-background-light selection:text-background-dark max-w-[1194px] mx-auto w-full"
-		>
+		<div class="benchmark-header max-w-[1194px] mx-auto w-full">
 			Just Arrow, Structured, Portable
 		</div>
 
-		<div class="flex flex-col md:flex-row border border-background-dark max-w-[1194px] mx-auto">
-			<article
-				class="border-b border-dashed apply-article-base md:border-r md:border-b-0 border-background-dark"
-			>
+		<div class="feature-section">
+			<article class="feature-article">
 				<p class="apply-heading">Vendor lock-in free</p>
 				<p class="text-base leading-normal">
 					Tonbo is built as a thin wrapper over Arrow schema and Parquet format, which means you are
 					able to use many analytic tools to can fully benefit from the Arrow ecosystem.
 				</p>
 			</article>
-			<article
-				class="border-b border-dashed apply-article-base md:border-b-0 md:border-r border-background-dark"
-			>
+			<article class="feature-article">
 				<p class="apply-heading">Combine agility of KV and convinient of structured</p>
 				<p class="text-base leading-normal">
 					Thanks to Rust lifetime, type system and asynchronous, Tonbo allows user to save each
@@ -127,7 +113,7 @@
 					</a>
 				</p>
 			</article>
-			<article class="apply-article-base">
+			<article class="feature-article">
 				<p class="apply-heading">From many sources to many targets</p>
 				<p class="text-base leading-normal">
 					As an embedded database, Tonbo supports customizing runtime and file system, and also it
