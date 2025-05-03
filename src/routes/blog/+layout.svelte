@@ -35,6 +35,10 @@
 		@apply mt-[1rem];
 	}
 
+	:global(.blog-content li p) {
+		@apply mt-0;
+	}
+
 	:global(.blog-content a) {
 		@apply underline;
 	}

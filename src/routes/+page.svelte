@@ -6,7 +6,40 @@
 </script>
 
 <svelte:head>
-	<title>Tonbo - an extensible in-process database supports object storage.</title>
+	<title
+		>Tonbo - Extensible In-Process Database with Object Storage Support | Apache Arrow & Parquet</title
+	>
+	<meta
+		name="description"
+		content="Tonbo is an extensible in-process database supporting object storage with Apache Arrow and Parquet. Get 2.2x faster performance than RocksDB with structured data support."
+	/>
+	<meta
+		name="keywords"
+		content="in-process database, object storage, Apache Arrow, Parquet, RocksDB alternative, embedded database, structured data"
+	/>
+	<meta name="author" content="Tonbo" />
+	<meta
+		property="og:title"
+		content="Tonbo - Extensible In-Process Database with Object Storage Support"
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://tonbo.io" />
+	<link rel="canonical" href="https://tonbo.io" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Tonbo",
+			"description": "An extensible in-process database supporting data storage on local disks and S3 with Apache Arrow and Parquet",
+			"applicationCategory": "Database",
+			"operatingSystem": "Cross-platform",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			}
+		}
+	</script>
 </svelte:head>
 
 <!-- PART 1 -->
