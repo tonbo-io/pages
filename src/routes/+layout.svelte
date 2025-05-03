@@ -21,6 +21,6 @@
 
 <slot />
 
-<div class="tonbo-footer">
+<div class="tonbo-footer apply-selection">
 	<div class="tonbo-footer-content">© Copyright 2024-, Tonbo IO Inc.</div>
 </div>

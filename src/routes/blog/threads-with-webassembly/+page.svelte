@@ -4,7 +4,7 @@
 	const content = `
 # Threads with WebAssembly
 
-October 30, 2024 by [Rui-Wen Cheng](mailto:chengruiwen@tonbo.io)
+October 30, 2024 by [Rui-wen Cheng](mailto:chengruiwen@tonbo.io)
 
 Multi-threading is a cornerstone of modern programming, enabling applications to handle multiple tasks simultaneously. While web browsers support concurrency through the [Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API), WebAssembly (Wasm) still lacks built-in thread support. Currently, threading in Wasm is part of an active [proposal](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md) in Phase 4 (standardizing the feature), as detailed in the [WebAssembly specification](https://webassembly.github.io/threads/).
 

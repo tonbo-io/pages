@@ -6,58 +6,84 @@
 </script>
 
 <svelte:head>
-	<title>Tonbo - an extensible embedded database supports object storage.</title>
+	<title>Tonbo - an extensible in-process database supports object storage.</title>
 </svelte:head>
 
 <!-- PART 1 -->
 <div class="responsive-container apply-selection font-code bg-background-dark">
 	<div
-		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-tonbo md:min-h-[620px]"
+		class="apply-container-base apply-container-responsive md:p-0 p-3.5 pb-10 border-l-2 border-r-2 border-background-light md:min-h-[620px]"
 	>
 		<div class="relative apply-selection-light">
 			<div
 				class="hidden border-b-[1px] md:block border-background-light text-background-light px-10"
 			>
-				<div class="md:w-[16.5rem] md:text-[1rem] -mr-[4rem] md:leading-[1.5rem] pb-6">
-					Tonbo, an embedded database, supports data storage on local disks and S3 for querying
-					anywhere with Apache Arrow and Parquet.
+				<div class="md:w-[16.5rem] md:text-[1rem] -mr-[4rem] md:leading-[1.5rem] pb-12">
+					An in-process database, supports data storage on local disks and S3 with Apache Arrow and
+					Parquet in native or browsers.
 				</div>
 			</div>
 			<div
-				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[588px] lg:min-h-[361px] md:w-[488px] md:min-h-[361px] text-font-light p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-9 md:pl-[104px] md:pr-20 md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
+				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[538px] lg:min-h-[361px] md:w-[488px] md:min-h-[361px] text-font-light p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-[4rem] md:pl-[6rem] md:pr-[6rem] md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
 			>
-				The simplest path to shared data storage.
+				<p>Simple path</p>
+				<p>to shared data storage.</p>
 			</div>
 		</div>
 
-		<div class="relative md:h-[449px]">
-			<div
-				class="flex flex-col md:flex-row w-[100px] md:w-[320px] md:justify-between shrink-0 mr-4 md:mr-0 md:absolute lg:right-[226px] md:right-[126px] md:bottom-0"
-			>
+		<div class="relative md:h-[400px]">
+			<!-- Desktop layout (flex container with items aligned at the bottom) -->
+			<div class="hidden md:flex md:items-end md:absolute md:bottom-0 md:left-0 md:right-0">
+				<div class="flex-grow-0 md:ml-[240px]">
+					<Dragonfly class="text-[17px]" />
+				</div>
+				<div class="flex-grow"></div>
+				<div class="flex md:w-[320px] md:justify-between lg:mr-[226px] md:mr-[126px]">
+					<a href="https://tonbo-io.github.io/tonbo/" target="_blank">
+						<div
+							class="apply-button-base apply-border text-font-light hover-tonbo md:w-[149px] md:mr-4"
+						>
+							Read Docs
+						</div>
+					</a>
+					<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
+						<div
+							class="apply-button-base apply-border hover-tonbo text-background-dark bg-tonbo-red md:w-[149px]"
+						>
+							Example
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<!-- Mobile layout (keep as is) -->
+			<div class="md:hidden flex flex-col w-[100px] shrink-0 mr-4">
 				<a href="https://tonbo-io.github.io/tonbo/" target="_blank">
 					<div
-						class="apply-button-base apply-border relative mb-4 text-font-light hover-tonbo md:w-[149px]"
+						class="text-[1rem] apply-button-base apply-border relative mb-4 text-font-light hover-tonbo"
 					>
 						Read Docs
 					</div>
 				</a>
 				<a href="https://github.com/tonbo-io/tonbo/tree/main/examples" target="_blank">
 					<div
-						class="apply-button-base apply-border relative hover-tonbo text-background-dark bg-tonbo-red md:w-[149px]"
+						class="text-[1rem] apply-button-base apply-border relative hover-tonbo text-background-dark bg-tonbo-red"
 					>
 						Example
 					</div>
 				</a>
 			</div>
 			<div
-				class="w-fit h-fit mt-[-130px] absolute right-0 md:absolute top-[-5px] xs:bottom-[-22px] sm:right-20 md:left-[240px] md:top-[260px]"
+				class="w-fit h-fit mt-[-130px] absolute right-0 md:hidden top-[-5px] xs:bottom-[-22px] sm:right-20"
 			>
-				<Dragonfly class="text-[14px] sm:text-[16px] md:text-[17px]" />
+				<Dragonfly class="text-[14px] sm:text-[16px]" />
 			</div>
 		</div>
 	</div>
 
-	<div class="p-[42px] apply-container-responsive h-[64px] apply-container-base border-tonbo"></div>
+	<div
+		class="p-[42px] apply-container-responsive h-[64px] apply-container-base border-t-2 border-l-2 border-r-2 border-background-light"
+	></div>
 </div>
 
 <div class="p-4 xs:px-10 bg-background-light apply-selection font-code">

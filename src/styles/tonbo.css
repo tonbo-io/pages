@@ -23,11 +23,11 @@
 }
 
 .nav-button-icon {
-    @apply max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert;
 }
 
 .nav-button-icon-x {
-    @apply max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[15px] sm:w-8 sm:mr-2 group-hover:invert;
 }
 
 /* Articles */
