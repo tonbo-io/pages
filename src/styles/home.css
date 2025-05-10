@@ -1,5 +1,106 @@
-/* This file is kept for backward compatibility
- * All styles have been moved to tonbo.css
- * Please update your imports to use tonbo.css directly
- */
-@import './tonbo.css';
+/* Tonbo Design System - Extracted from Tailwind Classes */
+
+/* Buttons */
+.apply-button-base {
+    @apply flex items-center justify-center p-2 md:text-[1.5rem] cursor-pointer select-none border sm:text-[0.8rem];
+}
+
+.apply-border {
+    @apply border-2 border-background-light;
+}
+
+/* Navigation */
+.nav-button {
+    @apply relative flex items-center justify-center h-8 px-1.5 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply border-background-light text-font-light bg-background-dark;
+    @apply hover:bg-background-light hover:text-background-dark;
+}
+
+.nav-button-social {
+    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply border-background-light text-font-light bg-background-dark;
+    @apply hover:bg-background-light hover:text-background-dark;
+}
+
+.nav-button-icon {
+    @apply max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert;
+}
+
+.nav-button-icon-x {
+    @apply max-w-[15px] sm:w-8 sm:mr-2 group-hover:invert;
+}
+
+/* Articles */
+.apply-article-base {
+    @apply mx-[2rem] md:mx-1 px-2 py-8 flex-1 md:px-12 md:py-0 md:my-12;
+}
+
+.apply-heading {
+    @apply mb-4 text-lg font-medium leading-normal text-center md:text-[1rem];
+}
+
+/* Selection */
+.apply-selection {
+    @apply selection:bg-background-dark selection:text-background-light;
+}
+
+.apply-selection-light {
+    @apply selection:bg-background-light selection:text-background-dark;
+}
+
+/* Card Styles */
+.card-dark {
+    @apply bg-background-dark text-font-light;
+}
+
+.card-light {
+    @apply bg-background-light text-background-dark;
+}
+
+/* Border Utilities */
+.border-tonbo {
+    @apply border-2 border-background-light;
+}
+
+/* Text Utilities */
+.text-tonbo {
+    @apply text-font-light;
+}
+
+/* Hover States */
+.hover-tonbo {
+    @apply hover:bg-background-light hover:text-background-dark;
+}
+
+.hover-tonbo-dark {
+    @apply hover:bg-background-dark hover:text-background-light;
+}
+
+/* Social Media Icons */
+.social-icon {
+    @apply max-w-[26px] sm:w-8 sm:mr-2 group-hover:invert;
+}
+
+/* Responsive Text */
+.responsive-text {
+    @apply text-base sm:text-[1.5rem];
+}
+
+/* Benchmark Section */
+.benchmark-header {
+    @apply bg-background-dark h-[3.5rem] text-background-light flex items-center justify-center md:text-[1.2rem];
+    @apply selection:bg-background-light selection:text-background-dark;
+}
+
+/* Feature Section */
+.feature-section {
+    @apply flex flex-col md:flex-row lg:flex-row border-[2px] border-background-dark lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] mx-auto;
+}
+
+.feature-article {
+    @apply  pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+}
+
+.feature-article-last {
+    @apply pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+}

@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
 	import '../styles/layout.css';
-	import '../styles/tonbo.css';
+	import '../styles/home.css';
 	import Navigator from './navigator.svelte';
 	import HomeNavigator from './home-navigator.svelte';
 	import { page } from '$app/stores';
@@ -21,6 +21,6 @@
 
 <slot />
 
-<div class="tonbo-footer apply-selection">
+<div class="tonbo-footer apply-selection pt-[6rem]">
 	<div class="tonbo-footer-content">© Copyright 2024-, Tonbo IO Inc.</div>
 </div>

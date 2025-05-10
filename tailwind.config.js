@@ -14,7 +14,8 @@ export default {
         "background-light": "#E7F1BE",
         "font-light": "#FFFDEC",
         "tonbo-red": "#EF6A21",
-        "tonbo-accent": "#EF6A21",
+        "tonbo-gray": "#6A6B54",
+        "tonbo-orange": "#EBAE70",
       },
       width: {
       }

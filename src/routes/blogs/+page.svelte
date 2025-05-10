@@ -1,5 +1,4 @@
 <script>
-	import '../../styles/blogs.css';
 	import PageHeader from '../header.svelte';
 
 	import 'highlight.js/styles/atom-one-dark.css';
@@ -32,7 +31,7 @@
 								href="/blog/exploring-better-async-rust-disk-io">Read more →</a
 							>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2025/3/24</p>
+						<p class="text-tonbo-gray mt-4 text-xs">2025/03/24</p>
 					</div>
 				</div>
 			</div>
@@ -55,7 +54,7 @@
 								href="/blog/threads-with-webassembly">Read more →</a
 							>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/12/27</p>
+						<p class="text-tonbo-gray mt-4 text-xs">2024/12/27</p>
 					</div>
 				</div>
 			</div>
@@ -76,7 +75,7 @@
 								>Read more →</a
 							>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/10/30</p>
+						<p class="text-tonbo-gray mt-4 text-xs">2024/10/30</p>
 					</div>
 				</div>
 			</div>
@@ -97,10 +96,20 @@
 							structured data storage. For Rust developers, we offer an ORM-like macro for ease of
 							use... <a class="underline" href="/blog/introducing-tonbo">Read more →</a>
 						</p>
-						<p class="text-[#6A6B54] mt-4 text-xs">2024/08/14</p>
+						<p class="text-tonbo-gray mt-4 text-xs">2024/08/14</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+	.apply-blog-base {
+		@apply md:w-[914px] md:px-0 px-2 sm:px-0 sm:w-[600px] py-6 min-h-full m-auto;
+	}
+
+	.apply-blog-block {
+		@apply px-8 md:px-12 py-4 border-black border-[1px] md:border-2;
+	}
+</style>
