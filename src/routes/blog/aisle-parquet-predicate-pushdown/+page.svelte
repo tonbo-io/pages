@@ -13,14 +13,9 @@ and memory usage for analytical queries, especially for selective queries on lar
 ## Predicate Pushdown
 **Predicate** pushdown *is* a query optimization technique used in database. It filters data in advance
 to reduce the data passed to the parent node. The following figure describes how predicate pushdown works.
-`}
-/>
 
-<div class="w-full max-w-full overflow-x-auto">
-	<pre
-		class="inline-block p-4 font-mono text-xs whitespace-pre sm:text-sm md:text-base min-w-max leading-[1.3">
-
-                    a &gt 30 AND b &lt 50
+\`\`\`
+                    a > 30 AND b < 50
 ┌───────────────────────┐      ┌────────────────────────┐
 │ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │      │  ┌ ─ ─ ┐┌ ─ ─ ┐┌ ─ ─ ┐ │
 │ ┃  1  ┃┃  9  ┃┃  3  ┃ │      │  │  1  ││  9  ││  3  │ │
@@ -28,7 +23,7 @@ to reduce the data passed to the parent node. The following figure describes how
 │ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │      │  ┌ ─ ─ ┐┌ ─ ─ ┐┌ ─ ─ ┐ │
 │ ┃  20 ┃┃  32 ┃┃  24 ┃ │      │  │  20 ││  32 ││  24 │ │
 │ ┗━━━━━┛┗━━━━━┛┗━━━━━┛ │      │  └ ─ ─ ┘└ ─ ─ ┘└ ─ ─ ┘ │
-│ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │━━━━━━▶  ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │
+│ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │━━━━━━▶ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │
 │ ┃  50 ┃┃  47 ┃┃  37 ┃ │      │  ┃  50 ┃┃  47 ┃┃  37 ┃ │
 │ ┗━━━━━┛┗━━━━━┛┗━━━━━┛ │      │  ┗━━━━━┛┗━━━━━┛┗━━━━━┛ │
 │ ┏━━━━━┓┏━━━━━┓┏━━━━━┓ │      │  ┌ ─ ─ ┐┌ ─ ─ ┐┌ ─ ─ ┐ │
@@ -36,14 +31,14 @@ to reduce the data passed to the parent node. The following figure describes how
 │ ┗━━━━━┛┗━━━━━┛┗━━━━━┛ │      │  └ ─ ─ ┘└ ─ ─ ┘└ ─ ─ ┘ │
 └───────────────────────┘      └────────────────────────┘
 
-predicate pushdown
+                              predicate pushdown
 ┌───────┐        ┌───────┐        ┌───────┐        ┌───────┐        ┌───────┐
 │┏━━━━━┓│        │┌ ─ ─ ┐│        │       │        │       │        │       │
 │┃  1  ┃│        ││  1  ││        │       │        │       │        │       │
 │┗━━━━━┛│        │└ ─ ─ ┘│        │       │        │       │        │       │
 │┏━━━━━┓│        │┌ ─ ─ ┐│        │       │        │       │        │       │
-│┃  20 ┃│ a &gt 30 ││  20 ││ load b │       │ b &lt 50 │       │ load c │       │
-│┗━━━━━┛│━━━━━━━▶│└ ─ ─ ┘│━━━━━━━▶│       │━━━━━━━▶│       │━━━━━━━▶│       │
+│┃  20 ┃│ a > 30 ││  20 ││ load b │       │ b < 50 │       │ load c │       │
+│┗━━━━━┛│━━━━━━▶│└ ─ ─ ┘│━━━━━━▶│       │━━━━━━▶│       │━━━━━━▶│       │
 │┏━━━━━┓│        │┏━━━━━┓│        │┏━━━━━┓│        │┏━━━━━┓│        │┏━━━━━┓│
 │┃  50 ┃│        │┃  50 ┃│        │┃  47 ┃│        │┃  47 ┃│        │┃  37 ┃│
 │┗━━━━━┛│        │┗━━━━━┛│        │┗━━━━━┛│        │┗━━━━━┛│        │┗━━━━━┛│
@@ -51,8 +46,10 @@ predicate pushdown
 │┃ 100 ┃│        │┃ 100 ┃│        │┃  99 ┃│        ││  99 ││        │       │
 │┗━━━━━┛│        │┗━━━━━┛│        │┗━━━━━┛│        │└ ─ ─ ┘│        │       │
 └───────┘        └───────┘        └───────┘        └───────┘        └───────┘
-</pre>
-</div>
+\`\`\`
+`}
+/>
+
 <Markdown
 	content={`
 - The upper one loads all rows and applies filter to each row. This approach may load too much unnecessary data.
@@ -78,24 +75,24 @@ After that, we read the [page index](https://github.com/apache/parquet-format/bl
 Aisle's predicate filtering approach provides significant performance benefits, especially for selective queries on large datasets. We designed sets of benchmark scenarios to test the performance of Aisle. The result shows considerable improvement when using predicate pushdown compared to traditional approaches. Here is the result of reading 1.3GB parquet file with ordered data.
 
 \`\`\`
-                                range query with ordered data
-╔═══════════════════════════════════════════════════════════════════════════╗
+                                     range query with ordered data
+                     ╔═══════════════════════════════════════════════════════════════════════════╗
 parquet              ╢███████████████████████████████████████████████████████████████████████████╟ 740.0068
 Parquet + Page index ╢██████████████████████████████████████████████████████████████████████░░░░░╟ 691.7279
 Aisle                ╢███████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟ 307.3197
 Aisle + Page index   ╢█████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟ 287.6667
-╠═══════════════════════════════════════════════════════════════════════════╣
-0                                                                           740.0068
+                     ╠═══════════════════════════════════════════════════════════════════════════╣
+                     0                                                                           740.0068
 
-                                equivalent query with ordered data
-╔═══════════════════════════════════════════════════════════════════════════╗
+                                    equivalent query with ordered data
+                     ╔═══════════════════════════════════════════════════════════════════════════╗
 parquet              ╢███████████████████████████████████████████████████████████████████████████╟ 652.1447
 Parquet + Page index ╢██████████████████████████████████████████████████████████████████████░░░░░╟ 611.5472
 Aisle                ╢█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟ 5.5786
 Aisle + Page index   ╢░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟ 2.717
-╠═══════════════════════════════════════════════════════════════════════════╣
-0                                                                           652.1447
-                                    (lower is better)
+                     ╠═══════════════════════════════════════════════════════════════════════════╣
+                     0                                                                           652.1447
+                                            (lower is better)
 \`\`\`
 
 Please see [here](https://github.com/tonbo-io/aisle/blob/main/docs/benchmark.md) for more benchmark results.

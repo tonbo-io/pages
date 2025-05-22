@@ -74,4 +74,9 @@
 	:global(.blog-content ::selection) {
 		@apply bg-background-dark text-background-light;
 	}
+
+	:global(.blog-content pre ::selection),
+	:global(.blog-content code ::selection) {
+		@apply bg-background-light text-background-dark;
+	}
 </style>

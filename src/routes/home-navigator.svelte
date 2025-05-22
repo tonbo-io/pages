@@ -22,6 +22,9 @@
 				<a href="/about">
 					<div type="button" class="nav-button">About</div>
 				</a>
+				<a href="/careers">
+					<div type="button" class="nav-button">Careers</div>
+				</a>
 				<a href="https://github.com/tonbo-io/tonbo">
 					<div type="button" class="nav-button-social group">
 						<img src={GitHubLogo} alt="GitHub Logo" class="nav-button-icon" />
