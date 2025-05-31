@@ -4,7 +4,7 @@
 	const content = `
 # Exploring better async Rust disk I/O
 
-March 24, 2025 by Rui-wen Cheng, Tzu Gwo
+March 24, 2025 by [Tzu Gwo](mailto:tzu@tonbo.io)
 
 ## TL;DR
 

@@ -201,7 +201,7 @@ drop(block);
 	const content = `
 # Async Rust is not safe with io_uring
 
-October 30, 2024 by Tzu Gwo
+October 30, 2024 by [Tzu Gwo](mailto:tzu@tonbo.io)
 
 ## TL;DR
 

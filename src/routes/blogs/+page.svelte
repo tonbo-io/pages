@@ -13,27 +13,24 @@
 			<PageHeader title="Tonbo's Blogs" />
 		</div>
 
-		<!-- <div class="apply-blog-base">
+		<div class="apply-blog-base">
 			<div class="apply-blog-block">
-				<a href="/blog/aisle-parquet-predicate-pushdown"
-					><h1 class="mb-4 text-4xl underline">Aisle: A fine pushdown parquet scanner</h1></a
+				<a href="/blog/introducing-aisle"
+					><h1 class="mb-4 text-4xl underline">Introducing Aisle: a pushdown Parquet scanner</h1></a
 				>
 				<div class="flex flex-col md:flex-row">
 					<div>
 						<p>
-							Today, we're excited to introduce Aisle, our high-performance Parquet file reader that
-							implements page-level predicate pushdown. This technological advancement significantly
-							reduces I/O operations and memory usage for analytical queries, especially for
-							selective queries on large datasets. ... <a
-								class="underline"
-								href="/blog/exploring-better-async-rust-disk-io">Read more →</a
-							>
+							We are excited to introduce Aisle: a lightweight Parquet query library that delivers
+							efficient predicate pushdown for reading Parquet files. Aisle's binary size is only
+							about one-fifth of the DataFusion Parquet datasource, making it compact and easy to
+							embed. ... <a class="underline" href="/blog/introducing-aisle">Read more →</a>
 						</p>
-						<p class="text-tonbo-gray mt-4 text-xs">2025/05/22</p>
+						<p class="text-tonbo-gray mt-4 text-xs">2025/05/29</p>
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div class="apply-blog-base">
 			<div class="apply-blog-block">
 				<a href="/blog/exploring-better-async-rust-disk-io"
