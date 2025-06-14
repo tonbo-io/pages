@@ -390,7 +390,7 @@
 						class="basis-1/4 flex flex-col items-center justify-center border-2 border-background-dark p-2 text-[1.5rem] hover-tonbo-dark"
 						href="https://github.com/tonbo-io/tonbo/tree/main/bindings"
 					>
-						Js/Py Bindings
+						JS/Py Bindings
 						<p class="text-left w-full">-></p>
 					</a>
 				</div>
@@ -435,7 +435,6 @@
 							epoll-based and io_uring-based runtimes.
 						</p>
 					</a>
-					<div class="flex-1"></div>
 				</div>
 			</div>
 			<div
