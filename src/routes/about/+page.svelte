@@ -34,8 +34,12 @@
 						</p>
 						<p><a href="https://x.com/CreamQ" class="underline">@Cream Tang</a></p>
 						<p>
-							Rui-wen Cheng:
-							<a class="underline" href="mailto: lizeren@tonbo.io"> chengruiwen@tonbo.io</a>
+							Daniel Martinez Maqueda:
+							<a class="underline" href="mailto: daniel@tonbo.io"> daniel@tonbo.io</a>
+						</p>
+						<p>
+							Guosong Li:
+							<a class="underline" href="mailto: guosong@tonbo.io"> guosong@tonbo.io</a>
 						</p>
 					</div>
 				</div>

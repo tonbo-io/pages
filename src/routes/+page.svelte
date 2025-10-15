@@ -8,6 +8,18 @@
 	import GitHubLogo from '$lib/images/github-logo.svg';
 	// import BenchmarkChart from './benchmark-chart.svelte';
 
+	const serverlessExample = `
+import { table } from "tonbo"
+
+export const handler = async (event) => {
+  const tbl = await table("s3://my-bucket/events")
+  await tbl.append({ user: event.user, ts: Date.now(), action: event.action })
+  for await (const r of tbl.project(["user"]).limit(1).scan()) {
+    console.log("latest user:", r.user)
+  }
+  return { statusCode: 200, body: "ok" }
+}`;
+
 	// let y;
 	// let stackHeader;
 	// let stackTitleHeight;
@@ -59,22 +71,17 @@
 <!-- <svelte:window bind:scrollY={y} /> -->
 
 <svelte:head>
-	<title
-		>Tonbo - Extensible In-Process Database with Object Storage Support | Apache Arrow & Parquet</title
-	>
+	<title>Tonbo</title>
 	<meta
 		name="description"
-		content="Tonbo is an extensible in-process database supporting object storage with Apache Arrow and Parquet. Get 2.2x faster performance than RocksDB with structured data support."
+		content="Tonbo is an in-process database for serverless online data analytics, building on Apache Arrow & Parquet."
 	/>
 	<meta
 		name="keywords"
-		content="in-process database, object storage, Apache Arrow, Parquet, RocksDB alternative, embedded database, structured data"
+		content="database, object storage, Apache Arrow, Apache Parquet, serverless, real-time analytics, embedded database, edge computing, data processing, data analytics, Tonbo"
 	/>
 	<meta name="author" content="Tonbo" />
-	<meta
-		property="og:title"
-		content="Tonbo - Extensible In-Process Database with Object Storage Support"
-	/>
+	<meta property="og:title" content="Tonbo" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://tonbo.io" />
 	<link rel="canonical" href="https://tonbo.io" />
@@ -83,14 +90,9 @@
 			"@context": "https://schema.org",
 			"@type": "SoftwareApplication",
 			"name": "Tonbo",
-			"description": "An extensible in-process database supporting data storage on local disks and S3 with Apache Arrow and Parquet",
+			"description": "Tonbo is an in-process database for serverless online data analytics, building on Apache Arrow & Parquet.",
 			"applicationCategory": "Database",
-			"operatingSystem": "Cross-platform",
-			"offers": {
-				"@type": "Offer",
-				"price": "0",
-				"priceCurrency": "USD"
-			}
+			"operatingSystem": "Cross-platform"
 		}
 	</script>
 </svelte:head>
@@ -104,16 +106,16 @@
 			<div
 				class="hidden border-b-[2px] md:block border-background-light text-background-light px-10"
 			>
-				<div class="md:w-[16.5rem] md:text-[1rem] -mr-[4rem] md:leading-[1.5rem] pb-12">
-					An in-process database, supports data storage on local disks and S3 with Apache Arrow and
-					Parquet in native or browsers.
+				<div class="md:w-[18.5rem] md:text-[1rem] -mr-[4rem] md:leading-[1.5rem] pb-12">
+					An in-process database that supports storing data in object storage with Apache
+					Arrow/Parquet format, and processing it in edge environments.
 				</div>
 			</div>
 			<div
-				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[538px] lg:min-h-[361px] md:w-[488px] md:min-h-[361px] text-font-light p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-[4rem] md:pl-[6rem] md:pr-[6rem] md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
+				class="border-2 text-5xl border-background-light w-[93%] sm:w-[456px] lg:w-[538px] lg:min-h-[361px] md:w-[488px] md:min-h-[361px] text-font-light p-[32px] pb-[48px] pr-2 leading-tight mt-10 mb-12 md:pt-[4rem] md:pl-[5rem] md:pr-[5rem] md:absolute md:top-0 md:right-[126px] lg:right-[226px] bg-background-dark"
 			>
-				<p>Simple path</p>
-				<p>to shared data storage.</p>
+				<p>Serverless</p>
+				<p>real-time analytics DB</p>
 			</div>
 		</div>
 
@@ -361,10 +363,54 @@
 			</div>
 		</div> -->
 
+		<!-- <div
+			class="mx-auto w-full lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] border-2 border-background-dark mt-[2rem]"
+		>
+			<div class="benchmark-header w-full text-center text-background-light">Compute</div>
+			<div class="w-full flex flex-col md:flex-row md:items-stretch gap-12 px-4 md:px-8 pt-8 pb-0">
+				<div
+					class="w-full md:basis-1/3 flex flex-col items-center md:items-start text-center md:text-left gap-4 pb-8 text-background-dark selection:bg-background-dark selection:text-background-light"
+				>
+					<h3 class="text-2xl font-medium tracking-tight">2X Faster than RocksDB</h3>
+					<p class="text-base font-light leading-relaxed">
+						ParadeDB brings column-oriented storage and vectorized query execution to Postgres
+						tables. Users can choose between row and column-oriented storage at table creation time.
+					</p>
+				</div>
+				<div
+					class="w-full md:w-auto lg:w-[440px] xl:w-[480px] 2xl:w-[560px] md:basis-2/3 flex items-start justify-end lg:flex-none"
+				>
+					<div
+						class="w-full bg-background-dark rounded-t-2xl rounded-b-none p-6 md:p-10 flex items-start justify-start"
+					>
+						<div class="w-full overflow-x-auto">
+							<pre
+								class="w-full text-left whitespace-pre font-code text-background-light text-[1rem] md:text-[1rem] leading-[1.5]">
+							<code>{serverlessExample}</code>
+							</pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="mx-auto w-full lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] mt-[2rem]">
+			<div class="benchmark-header w-full text-center text-background-light">Update Notice</div>
+			<div class="w-full flex justify-center px-2 py-6">
+				<div
+					class="w-full md:max-w-[1040px] px-2 md:px-4 text-background-dark text-[0.8rem] md:text-[1rem] font-light leading-relaxed selection:bg-background-dark selection:text-background-light"
+				>
+					Coming mid-October: Query APIs designed to plug into PostgreSQL, SQLite, and more —
+					analyze S3 data directly in Node.js and Deno, with zero disk required. Closer-to-edge,
+					serverless analytics.
+				</div>
+			</div>
+		</div>
+
 		<div
 			class="benchmark-header lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] mx-auto w-full mt-[2rem] text-center text-background-light"
 		>
-			Tonbo's Stack
+			Delivering components with no vendor lock-in
 		</div>
 		<div
 			class="mx-auto lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] flex flex-col-reverse md:flex-row mb-[6rem] mt-[3rem] md:pl-[2rem] md:pr-[2rem] gap-[2rem]"
@@ -382,8 +428,7 @@
 					>
 						TonboLite ->
 						<p class="text-[1rem] mt-[0.75rem]">
-							is a WASM compatible SQLite extension that allows users to create tables which
-							supports analytical processing directly in SQLite.
+							is a WASM compatible SQLite extension based on Tonbo.
 						</p>
 					</a>
 					<a
@@ -401,8 +446,8 @@
 					>
 						Tonbo ->
 						<p class="text-[1rem] mt-[0.75rem]">
-							is an in-process, persistent database offering fast KV-like methods for conveniently
-							writing and scanning type-safe structured data.
+							is an embeddable, analytics-ready database with real-time inserts and queries across
+							browsers, local disks, and object storage.
 						</p>
 					</a>
 					<div
@@ -411,7 +456,7 @@
 						Storage Engine
 					</div>
 				</div>
-				<div class="flex-1 flex gap-2">
+				<div class="flex gap-2">
 					<div
 						class="max-w-[2.5rem] flex-1 flex items-center justify-center [writing-mode:vertical-lr] bg-background-dark text-background-light p-[0.75rem]"
 					>
@@ -431,11 +476,18 @@
 						</div>
 
 						<p class="text-[1rem] mt-[0.75rem]">
-							provides read/write operations to multiple storages (disk, AWS S3) on top of both
-							epoll-based and io_uring-based runtimes.
+							provides unified read/write operations across OPFS, epoll and io_uring.
 						</p>
 					</a>
-					<div class="flex-1"></div>
+					<a
+						class="flex-1 basis-1/2 p-[1rem] border-2 border-background-dark text-[1.5rem] hover-tonbo-dark"
+						href="https://github.com/tonbo-io/typed-arrow"
+					>
+						typed-arrow ->
+						<p class="text-[1rem] mt-[0.75rem]">
+							is a First-class compile‑time Arrow schemas for Rust.
+						</p>
+					</a>
 				</div>
 			</div>
 			<div
@@ -561,6 +613,7 @@
 		</div>
 
 		<!-- PART 3 -->
+		<!--
 		<div
 			class="benchmark-header lg:max-w-[1194px] md:max-w-[996px] sm:max-w-[600px] mx-auto w-full text-center text-background-light"
 		>
@@ -598,6 +651,7 @@
 				</p>
 			</article>
 		</div>
+		-->
 	</div>
 </div>
 
