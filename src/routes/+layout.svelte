@@ -8,6 +8,12 @@
 </script>
 
 <div class="bg-background-dark">
+	
+	<!-- Top Banner -->
+	<div class="w-full bg-tonbo-red text-background-light font-code text-center py-2 text-base">
+			🔥Introducing New Tonbo - Read our Manifesto!
+	</div>
+
 	{#if $page.url.pathname === '/'}
 		<HomeNavigator
 			class="apply-navigator-base apply-navigator-responsive apply-home-navigator font-code"

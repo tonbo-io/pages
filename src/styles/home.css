@@ -98,9 +98,73 @@
 }
 
 .feature-article {
-    @apply  pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+    @apply pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
 }
 
 .feature-article-last {
     @apply pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+}
+
+/* Stack Cards - Desktop */
+.stack-card {
+    @apply block p-4 font-code;
+    background: #B5BDA3;
+    transition: all 0.2s ease;
+}
+
+.stack-card:hover {
+    @apply bg-background-dark text-background-light;
+}
+
+.stack-card:hover .stack-card-title,
+.stack-card:hover .stack-card-desc {
+    @apply text-background-light;
+}
+
+.stack-card-title {
+    @apply text-lg font-medium text-background-dark block mb-2;
+}
+
+.stack-card-desc {
+    @apply text-sm text-background-dark;
+}
+
+/* Stack Cards - Mobile */
+.stack-card-mobile {
+    @apply block p-3 font-code;
+    background: #B5BDA3;
+}
+
+.stack-card-title-mobile {
+    @apply text-sm font-medium text-background-dark block mb-1;
+}
+
+.stack-card-desc-mobile {
+    @apply text-xs text-background-dark;
+}
+
+/* Demo Section */
+.demo-copy-btn {
+    @apply bg-background-dark text-background-light px-4 py-2 font-code text-sm;
+    transition: all 0.2s ease;
+}
+
+.demo-copy-btn:hover {
+    @apply bg-tonbo-red;
+}
+
+.demo-copy-btn-mobile {
+    @apply bg-background-dark text-background-light px-3 py-2 font-code text-xs;
+}
+
+.demo-code-block {
+    @apply p-6 font-code text-background-light;
+    background: #1F251A;
+    border-radius: 8px;
+}
+
+.demo-code-block-mobile {
+    @apply p-4 font-code text-background-light;
+    background: #1F251A;
+    border-radius: 8px;
 }

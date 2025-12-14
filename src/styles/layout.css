@@ -4,11 +4,11 @@
 }
 
 .apply-navigator-responsive {
-  @apply sm:w-[600px] md:w-[1000px] lg:w-[1200px];
+  @apply sm:w-[600px] min-[836px]:w-[768px] md:w-[1000px] lg:w-[1200px];
 }
 
 .apply-home-navigator {
-  @apply py-10 h-[183px] lg:h-[103px] md:h-[103px];
+  @apply py-10 h-[113px] lg:h-[103px] md:h-[103px];
 }
 
 .apply-regular-navigator {
@@ -21,7 +21,7 @@
 }
 
 .apply-container-responsive {
-  @apply w-full sm:w-[600px] md:w-[1000px] lg:w-[1200px];
+  @apply w-full sm:w-[600px] min-[836px]:w-[768px] md:w-[1000px] lg:w-[1200px];
 }
 
 /* Responsive Utilities */

@@ -1,5 +1,5 @@
 <pre
-	class="{$$props.class} font-code scale-y-[0.8] origin-bottom leading-[1.25] text-tonbo-red bg-background-light"
+	class="{$$props.class} font-code scale-y-[0.8] origin-bottom leading-[1.25] text-background-dark bg-background-light"
 	data-svelte-h="svelte-aqwz3a">██████████████████████████
 ██████████████████████████
 ██████████████████████████
