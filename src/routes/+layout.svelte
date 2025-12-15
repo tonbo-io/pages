@@ -14,15 +14,15 @@
 			🔥Introducing New Tonbo - Read our Manifesto!
 	</div>
 
-	{#if $page.url.pathname === '/'}
+	<!-- {#if $page.url.pathname === '/'} -->
 		<HomeNavigator
 			class="apply-navigator-base apply-navigator-responsive apply-home-navigator font-code"
 		/>
-	{:else}
+	<!-- {:else}
 		<Navigator
 			class="apply-navigator-base apply-navigator-responsive apply-regular-navigator font-code"
 		/>
-	{/if}
+	{/if} -->
 </div>
 
 <slot />

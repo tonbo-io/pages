@@ -17,17 +17,17 @@
 }
 
 .nav-button-social {
-    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[2px] cursor-pointer select-none sm:px-2;
     @apply border-background-light text-font-light bg-background-dark;
     @apply hover:bg-background-light hover:text-background-dark;
 }
 
 .nav-button-icon {
-    @apply max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[20px] sm:w-8 mr-0 md:mr-2 group-hover:invert;
 }
 
 .nav-button-icon-x {
-    @apply max-w-[15px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[15px] sm:w-8 mr-0 md:mr-2 group-hover:invert;
 }
 
 /* Articles */
@@ -107,22 +107,40 @@
 
 /* Stack Cards - Desktop */
 .stack-card {
-    @apply block p-4 font-code;
-    background: #B5BDA3;
+    @apply block sm:p-4 p-2 font-code;
+    background: #BFC4B2;
     transition: all 0.2s ease;
 }
 
-.stack-card:hover {
+.stack-card-secondary {
+    @apply block sm:p-4 p-2 font-code;
+    background: #EAEDE3;
+    transition: all 0.2s ease;
+}
+
+.stack-card-tertiary {
+    @apply block sm:p-4 p-2 font-code;
+    background: #CBCEC1;
+    transition: all 0.2s ease;
+}
+
+.stack-card:hover,
+.stack-card-secondary:hover,
+.stack-card-tertiary:hover {
     @apply bg-background-dark text-background-light;
 }
 
 .stack-card:hover .stack-card-title,
-.stack-card:hover .stack-card-desc {
+.stack-card:hover .stack-card-desc,
+.stack-card-secondary:hover .stack-card-title,
+.stack-card-secondary:hover .stack-card-desc,
+.stack-card-tertiary:hover .stack-card-title,
+.stack-card-tertiary:hover .stack-card-desc {
     @apply text-background-light;
 }
 
 .stack-card-title {
-    @apply text-lg font-medium text-background-dark block mb-2;
+    @apply text-lg font-code text-background-dark block mb-2;
 }
 
 .stack-card-desc {
@@ -145,7 +163,7 @@
 
 /* Demo Section */
 .demo-copy-btn {
-    @apply bg-background-dark text-background-light px-4 py-2 font-code text-sm;
+    @apply bg-[#666F63] text-background-light px-5 py-4 font-code text-sm rounded-lg;
     transition: all 0.2s ease;
 }
 
@@ -167,4 +185,33 @@
     @apply p-4 font-code text-background-light;
     background: #1F251A;
     border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+.tonbo-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #E4E6D9 #1F251A;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #E4E6D9;
+    border-radius: 4px;
+    border: 2px solid #1F251A;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #BFC4B2;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
 }

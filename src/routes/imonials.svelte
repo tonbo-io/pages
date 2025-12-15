@@ -51,26 +51,26 @@
 </script>
 
 <!-- Desktop: Horizontal auto-scrolling -->
-<div class="testimonials-container hidden sm:block">
-	<div class="testimonials-wrapper">
+<div class="overflow-hidden py-8 hidden sm:block">
+	<div class="relative w-full">
 		<div class="testimonials-track">
 			{#each testimonials as item}
-				<div class="testimonial-card">
-					<div class="testimonial-header">
-						<span class="testimonial-name">{item.name}</span>
-						<span class="testimonial-handle">{item.handle}</span>
+				<div class="shrink-0 w-[360px] h-[276px] flex flex-col justify-center p-6 border-y border-background-dark bg-background-light">
+					<div class="flex flex-col mb-3">
+						<span class="font-code text-base text-background-dark">{item.name}</span>
+						<span class="text-base text-tonbo-gray">{item.handle}</span>
 					</div>
-					<p class="testimonial-content">{item.content}</p>
+					<p class="testimonial-content text-base text-background-dark">{item.content}</p>
 				</div>
 			{/each}
 			<!-- Duplicate for seamless loop -->
 			{#each testimonials as item}
-				<div class="testimonial-card">
-					<div class="testimonial-header">
-						<span class="testimonial-name">{item.name}</span>
-						<span class="testimonial-handle">{item.handle}</span>
+				<div class="shrink-0 w-[360px] h-[276px] p-6 border-y border-background-dark bg-background-light">
+					<div class="flex flex-col mb-3">
+						<span class="font-code text-base text-background-dark">{item.name}</span>
+						<span class="text-base text-tonbo-gray">{item.handle}</span>
 					</div>
-					<p class="testimonial-content">{item.content}</p>
+					<p class="testimonial-content text-base text-background-dark">{item.content}</p>
 				</div>
 			{/each}
 		</div>
@@ -81,29 +81,18 @@
 <div class="sm:hidden px-4 py-6">
 	<div class="grid grid-cols-2 gap-3">
 		{#each testimonials.slice(0, 4) as item}
-			<div class="testimonial-card-mobile">
-				<div class="testimonial-header-mobile">
-					<span class="testimonial-name">{item.name}</span>
-					<span class="testimonial-handle">{item.handle}</span>
+			<div class="h-44 flex flex-col justify-center p-4 border-y border-background-dark bg-background-light">
+				<div class="flex flex-col mb-2">
+					<span class="font-code text-base text-background-dark">{item.name}</span>
+					<span class="text-base text-tonbo-gray">{item.handle}</span>
 				</div>
-				<p class="testimonial-content-mobile">{item.content}</p>
+				<p class="text-xs leading-[1.4] text-background-dark line-clamp-4">{item.content}</p>
 			</div>
 		{/each}
 	</div>
 </div>
 
 <style>
-	/* Container */
-	.testimonials-container {
-		overflow: hidden;
-		padding: 2rem 0;
-	}
-
-	.testimonials-wrapper {
-		position: relative;
-		width: 100%;
-	}
-
 	/* Scrolling track */
 	.testimonials-track {
 		display: flex;
@@ -122,64 +111,5 @@
 		100% {
 			transform: translateX(-50%);
 		}
-	}
-
-	/* Desktop Card */
-	.testimonial-card {
-		flex-shrink: 0;
-		min-width: 320px;
-		max-width: 350px;
-		padding: 1.5rem 1.5rem;
-		border-top: 1px solid #1f251a;
-		border-bottom: 1px solid #1f251a;
-		background: #e4e6d9;
-	}
-
-	.testimonial-header {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 0.75rem;
-	}
-
-	.testimonial-name {
-		font-weight: 500;
-		font-size: 1rem;
-		color: #1f251a;
-	}
-
-	.testimonial-handle {
-		font-size: 0.85rem;
-		color: #6a6b54;
-	}
-
-	.testimonial-content {
-		font-size: 0.9rem;
-		line-height: 1.5;
-		color: #1f251a;
-	}
-
-	/* Mobile Card */
-	.testimonial-card-mobile {
-		padding: 1rem;
-		border-top: 1px solid #1f251a;
-		border-bottom: 1px solid #1f251a;
-		background: #e4e6d9;
-	}
-
-	.testimonial-header-mobile {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 0.5rem;
-	}
-
-	.testimonial-content-mobile {
-		font-size: 0.75rem;
-		line-height: 1.4;
-		color: #1f251a;
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		line-clamp: 4;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
 	}
 </style>

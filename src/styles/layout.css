@@ -1,6 +1,6 @@
 /* Layout-specific styles */
 .apply-navigator-base {
-  @apply w-full mx-auto flex justify-between bg-background-dark pt-[2rem] pb-[2rem] flex-col sm:flex-row relative;
+  @apply w-full mx-auto flex justify-between bg-background-dark flex-col sm:flex-row relative py-[8px] px-4 xs:px-10 sm:py-[15px] sm:px-[18px] md:pt-[22px] md:pr-[17px] md:pb-[14.866px] md:pl-[18px];
 }
 
 .apply-navigator-responsive {
@@ -8,7 +8,6 @@
 }
 
 .apply-home-navigator {
-  @apply py-10 h-[113px] lg:h-[103px] md:h-[103px];
 }
 
 .apply-regular-navigator {
@@ -41,7 +40,7 @@
 
 /* Custom Components */
 .tonbo-header {
-  @apply m-auto flex w-full bg-background-dark h-[78px] items-center justify-center font-code relative;
+  @apply m-auto flex w-full h-[78px] items-center justify-center font-code relative;
 }
 
 .tonbo-navigation {
@@ -55,5 +54,5 @@
 }
 
 .tonbo-footer-content {
-  @apply bg-background-light w-[340px] md:w-[1000px] lg:w-[1100px] mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code;
+  @apply bg-background-light w-full sm:w-[1000px] lg:w-[1100px] md:mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code;
 }

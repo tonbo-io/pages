@@ -13,7 +13,7 @@
 	}
 </script>
 
-<nav class="{$$props.class} w-full flex justify-center py-8 px-4 font-code">
+<nav class="{$$props.class} w-[calc(100%-2rem)] xs:w-[calc(100%-5rem)] flex justify-center px-4 font-code">
 	<div class="w-full flex flex-row items-center justify-between gap-4">
 		<!-- Logo -->
 		<a href="/">

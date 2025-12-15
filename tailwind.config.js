@@ -14,7 +14,7 @@ export default {
 				'background-light': '#E4E6D9',
 				'font-light': '#FFFDEC',
 				'tonbo-red': '#E5673E',
-				'tonbo-gray': '#6A6B54',
+				'tonbo-gray': '#666F63',
 				'tonbo-orange': '#EBAE70',
 				'tonbo-light': '#BFC4B2',
 				'tonbo-colortx': '#ECEDEA'
