@@ -2,9 +2,9 @@
 	import '../../app.css';
 </script>
 
-<div class="bg-[#E7F1BE] font-code">
+<div class="bg-background-light font-code">
 	<div
-		class="min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 md:border-b-2 border-black"
+		class="min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto "
 	>
 		<article
 			class="w-full sm:w-[600px] md:w-[800px] mx-auto relative flex flex-col text-background-dark px-10 leading-[1.618] pb-[4rem] md:border-x-0 border-background-dark sm:px-0"

@@ -22,7 +22,16 @@
 .apply-container-responsive {
   @apply w-full sm:w-[600px] min-[836px]:w-[768px] md:w-[1000px] lg:w-[1200px];
 }
+/* md:max-w-[1200px] */
 
+.apply-container-demo {
+  @apply min-[1500px]:w-full lg:w-[1200px] md:w-[1000px] sm:w-[600px] min-[836px]:w-[768px];
+}
+
+/* sm:w-[600px] min-[836px]:w-[768px] */
+.apply-container-demo-responsive {
+  @apply w-full lg:w-[1200px];
+}
 /* Responsive Utilities */
 .responsive-container {
   @apply w-full px-4 xs:px-10;
@@ -54,5 +63,5 @@
 }
 
 .tonbo-footer-content {
-  @apply bg-background-light w-full sm:w-[1000px] lg:w-[1100px] md:mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code;
+  @apply bg-background-light w-full sm:w-[600px] min-[836px]:w-[768px] md:w-[1000px] lg:w-[1200px] md:mx-10 text-center text-background-dark border-t border-dashed border-background-dark pt-6 py-4 mt-6 font-code;
 }

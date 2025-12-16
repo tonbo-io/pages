@@ -58,7 +58,7 @@
 			class="grid w-full max-w-[1280px] h-[608px] sm:h-[623px] max-h-[661px] px-2 sm:px-4 gap-y-2 gap-x-2 sm:gap-x-4 grid-rows-6 sm:grid-rows-5 grid-cols-6 self-stretch shrink-0"
 		>
 		<!-- REAL-TIME -->
-			<div class="hidden sm:flex col-start-5 col-span-2 row-start-1 md:row-start-1 row-span-1 self-start justify-self-stretch justify-end pt-1 px-4">
+			<div class="hidden sm:flex col-start-5 col-span-2 row-start-1 md:row-start-1 row-span-1 self-start justify-self-stretch justify-end px-4">
 				<span class="text-base flex flex-col items-start md:flex-row md:items-center text-background-light">
 					<span class="flex">
 						<span class="mr-[3em]">R</span>
@@ -109,7 +109,7 @@
 			</div>
 			
 			<!-- Col 3 (Orange Circle) -->
-			<div class="col-start-5 sm:col-start-3 col-span-1 row-start-2 sm:row-start-1 md:row-start-2 row-span-1 justify-self-end self-start sm:self-center z-10">
+			<div class="col-start-5 sm:col-start-3 col-span-1 row-start-2 sm:row-start-1 md:row-start-2 row-span-1 justify-self-end self-start sm:self-center z-10 pt-[0.125rem] sm:pt-0">
 				<div class="w-[41px] h-[41px] sm:w-[54px] sm:h-[54px] rounded-full bg-[#E5673E] border-[8px] border-[#1F251A] z-20"></div>
 			</div>
 
@@ -131,7 +131,7 @@
 				<div
 					class="border border-background-light p-6 md:p-12 w-full h-full flex items-center justify-center bg-background-dark relative z-10"
 				>
-					<p class="text-3xl md:text-4xl lg:text-5xl text-tonbo-colortx tracking-tighter font-code leading-normal">
+					<p class="text-3xl md:text-4xl lg:text-5xl !leading-[1.15] text-tonbo-colortx tracking-tighter font-code">
 						A___portable__<br />
 						embedded______<br />
 						database_using<br />
@@ -158,13 +158,13 @@
 			<div class="contents sm:col-start-4 sm:col-span-3 sm:row-start-5 sm:row-span-1 sm:justify-self-stretch sm:flex sm:justify-between sm:items-center md:contents">
 				<a
 					href="https://github.com/tonbo-io/tonbo"
-					class="col-start-3 col-span-2 row-start-6 row-span-1 self-center justify-self-start inline-flex items-center gap-[10px] bg-tonbo-red text-background-dark font-code text-lg hover:bg-tonbo-orange transition-colors sm:self-center md:col-start-4 md:col-span-1 md:row-start-5 md:row-span-1 md:justify-self-start"
-				>
+					class="col-start-3 col-span-2 row-start-6 row-span-1 self-center justify-self-start inline-flex items-center gap-[10px] bg-tonbo-red text-background-dark font-code text-lg min-[836px]:text-2xl hover:bg-tonbo-orange transition-colors sm:self-center md:col-start-4 md:col-span-1 md:row-start-5 md:row-span-1 md:justify-self-start"
+				> 
 					&lt; GitHub &gt;
 				</a>
 				<a
 					href="/blogs/introducing-tonbo"
-					class="col-start-6 col-span-1 row-start-6 row-span-1 justify-self-end self-center w-[86px] h-[50px] flex justify-center items-center sm:w-auto sm:h-auto sm:inline sm:self-center text-tonbo-colortx underline font-code text-lg underline-offset-4 hover:text-tonbo-orange transition-colors md:col-start-5 md:col-span-1 md:row-start-5 md:row-span-1 md:justify-self-start"
+					class="col-start-6 col-span-1 row-start-6 row-span-1 justify-self-end self-center w-[86px] h-[50px] flex justify-center items-center sm:w-auto sm:h-auto sm:inline sm:self-center text-tonbo-colortx underline font-code text-lg min-[836px]:text-2xl underline-offset-4 hover:text-tonbo-orange transition-colors md:col-start-5 md:col-span-1 md:row-start-5 md:row-span-1 md:justify-self-start"
 				>
 					Read Manifesto
 				</a>
@@ -177,19 +177,19 @@
 	</div>
 </div>
 
-<div class="py-4 px-2 sm:px-4 md:px-28 bg-background-light apply-selection font-code mx-auto">
+<div class="py-4 px-2 sm:px-4 md:px-28 min-[1500px]:px-40 bg-background-light apply-selection font-code mx-auto">
 	<!-- Demo Section -->
 	<div
-		class="py-4 sm:py-12 w-full mx-auto border border-[#666F63]"
+		class="py-4 sm:py-12 apply-container-demo mx-auto border border-[#666F63]"
 	>
 		<!-- Unified Responsive Layout -->
-		<div class="apply-container-responsive mx-auto px-4 sm:px-8 md:px-8 flex flex-col md:flex-row gap-8 md:gap-24">
+		<div class="apply-container-demo-responsive justify-center mx-auto px-4 sm:px-8 md:px-8 flex flex-col md:flex-row gap-8 md:gap-16">
 			<!-- Left: Info -->
-			<div class="w-full md:w-96 flex flex-col sm:flex-row md:flex-col justify-between md:justify-start gap-6 md:gap-4 md:pt-0 md:px-8 md:items-start sm:pt-4 sm:items-end sm:pb-4 sm:px-8">
+			<div class="w-full md:w-96 flex flex-col sm:flex-row md:flex-col justify-between md:justify-start gap-6 md:gap-4 md:pt-0 md:items-start sm:pt-4 sm:items-end sm:pb-4 md:px-0 px-8">
 				<!-- Text Group -->
 				<div class="w-full sm:w-1/2 md:w-full flex flex-col justify-start">
 					<span
-						class="inline-block bg-tonbo-red text-background-light px-2 text-sm font-code mb-4 w-fit"
+						class="inline-block bg-tonbo-red text-background-light px-2 text-base !leading-[1.25rem] font-code mb-4 w-fit"
 					>
 						Demo
 					</span>
@@ -207,8 +207,9 @@
 						on:click={() => copyToClipboard('cargo add tonbo@0.4.0-a0 tokio')}
 					>
 						<span>cargo add tonbo@0.4.0-a0 tokio</span>
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="w-5 h-5 demo-copy-svg" fill="none" viewBox="0 0 24 24">
 							<path
+								stroke="currentColor"
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
@@ -257,9 +258,9 @@
 							>?;</code
 						></pre>
 					</div>
-				</div>
 			</div>
 		</div>
+	</div>
 	
 
 	<!-- Stack Section -->
@@ -269,7 +270,7 @@
 			<!-- Title Area -->
 			<div class="w-3/4 flex flex-col items-start gap-4 px-[3px]">
 				<span
-					class="inline-block border border-tonbo-red text-tonbo-red px-1 text-sm font-code w-fit self-end"
+					class="inline-block border border-tonbo-red text-tonbo-red px-1 text-base !leading-[1.25rem] font-code w-fit self-end"
 				>
 					Stack
 				</span>
@@ -277,7 +278,7 @@
 					One engine,<br />multiple surfaces.
 				</h2>
 				<span
-					class="inline-block bg-background-dark text-background-light px-2 py-2 text-xl font-code w-fit"
+					class="inline-block bg-background-dark text-background-light px-2 py-1 text-xl font-code w-fit"
 				>
 					with No vendor lock-in
 				</span>
@@ -335,7 +336,7 @@
 			<!-- Left: Title area -->
 			<div class="sm:w-1/3 md:w-1/4 flex flex-col items-start gap-4 px-[3px] pb-4">
 				<span
-					class="inline-block border border-tonbo-red text-tonbo-red px-1 text-sm font-code w-fit self-end"
+					class="inline-block border border-tonbo-red text-tonbo-red px-1 text-base !leading-[1.25rem] font-code w-fit self-end"
 				>
 					Stack
 				</span>
@@ -343,22 +344,22 @@
 					One engine,<br />multiple surfaces.
 				</h2>
 				<span
-					class="inline-block bg-background-dark text-background-light px-2 py-2 text-xl font-code w-fit md:w-full text-center self-start md:self-end"
+					class="inline-block bg-background-dark text-background-light px-2 py-1 text-xl font-code w-fit md:w-full text-left self-start md:self-end"
 				>
 					with No vendor lock-in
 				</span>
 			</div>
 
 			<!-- Right: Cards grid -->
-			<div class="w-full md:w-3/4 flex flex-col sm:grid sm:grid-cols-3 gap-0 sm:gap-4 py-4">
+			<div class="w-full sm:w-2/3 md:w-3/4 flex flex-col sm:grid sm:grid-cols-3 gap-0 sm:gap-4 py-4">
 				<!-- User Interface Column -->
-				<div class="flex flex-col gap-2 py-4 px-0">
+				<div class="flex flex-col gap-4 py-4 sm:px-2 sm:py-2">
 					<p class="text-base font-code text-background-dark font-bold">User Interface</p>
-					<a href="https://github.com/tonbo-io/tonbolite" class="stack-card h-40 w-60 flex flex-col justify-center">
+					<a href="https://github.com/tonbo-io/tonbolite" class="stack-card h-40 w-full flex flex-col justify-center">
 						<span class="stack-card-title">TonboLite →</span>
 						<p class="stack-card-desc sm:text-sm">SQLite interface of Tonbo</p>
 					</a>
-					<a href="https://github.com/tonbo-io/tonbo/tree/main/bindings" class="stack-card h-40 w-60 flex flex-col justify-center">
+					<a href="https://github.com/tonbo-io/tonbo/tree/main/bindings" class="stack-card h-40 w-full flex flex-col justify-center">
 						<span class="stack-card-title">Js/Py Bindings →</span>
 						<p class="stack-card-desc sm:text-sm">same engine in Node, Deno, browsers, and Python.</p>	
 					</a>
@@ -378,7 +379,7 @@
 				<!-- I/O Column -->
 				<div class="flex flex-row sm:flex-col items-start gap-4 py-4 sm:px-2 sm:py-2">
 					<p class="text-base font-code text-background-dark font-bold sm:w-auto">I/O</p>
-					<a href="https://github.com/tonbo-io/fusio" class="stack-card-tertiary h-40 py-4 flex-1 sm:flex-none">
+					<a href="https://github.com/tonbo-io/fusio" class="stack-card-tertiary h-40 w-full py-4 flex-1 sm:flex-none">
 						<span class="stack-card-title"
 							>Fusio <img
 								src="/fusio-icon.svg"
@@ -388,7 +389,7 @@
 						>
 						<p class="stack-card-desc">unified async storage I/O (local, OPFS, io_uring, S3)</p>
 					</a>
-					<a href="https://github.com/tonbo-io/typed-arrow" class="stack-card-tertiary h-40 py-4 flex-1 sm:flex-none">
+					<a href="https://github.com/tonbo-io/typed-arrow" class="stack-card-tertiary h-40 w-full py-4 flex-1 sm:flex-none">
 						<span class="stack-card-title">typed-arrow →</span>
 						<p class="stack-card-desc">compile-time/runtime typed Arrow schemas for Rust.</p>
 					</a>
@@ -399,7 +400,7 @@
 
 	<!-- Community Section -->
 	<div class="py-3 px-4 text-center mx-auto">
-		<span class="inline-block bg-tonbo-red text-background-light px-2 text-base font-code mb-4">
+		<span class="inline-block bg-tonbo-red text-background-light px-2 text-base !leading-[1.25rem] font-code mb-4">
 			Community
 		</span>
 		<h2 class="text-3xl md:text-4xl font-code text-background-dark mb-4">Got Fire in Community</h2>

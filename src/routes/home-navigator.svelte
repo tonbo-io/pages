@@ -62,8 +62,8 @@
 
 	<!-- Mobile Menu Overlay -->
 	{#if isMenuOpen}
-		<div class="fixed inset-0 z-50 bg-background-dark p-4 flex flex-col">
-			<div class="w-full flex justify-between items-center pb-4 border-b border-background-light">
+		<div class="fixed inset-0 z-50 bg-background-dark px-4 py-2 flex flex-col">
+			<div class="w-full flex justify-between items-center pb-2 border-b border-background-light">
 				<a href="/" on:click={toggleMenu}>
 					<Tonbo inverted={true} />
 				</a>

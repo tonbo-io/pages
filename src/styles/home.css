@@ -11,13 +11,13 @@
 
 /* Navigation */
 .nav-button {
-    @apply relative flex items-center justify-center h-8 px-1.5 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply relative flex items-center justify-center h-8 px-1.5 mx-1 border-[1px] cursor-pointer select-none sm:px-4;
     @apply border-background-light text-font-light bg-background-dark;
     @apply hover:bg-background-light hover:text-background-dark;
 }
 
 .nav-button-social {
-    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[2px] cursor-pointer select-none sm:px-2;
+    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[1px] cursor-pointer select-none sm:px-2;
     @apply border-background-light text-font-light bg-background-dark;
     @apply hover:bg-background-light hover:text-background-dark;
 }
@@ -163,16 +163,24 @@
 
 /* Demo Section */
 .demo-copy-btn {
-    @apply bg-[#666F63] text-background-light px-5 py-4 font-code text-sm rounded-lg;
+    @apply bg-[#666F63] text-tonbo-colortx px-5 py-4 font-code text-sm rounded-lg;
     transition: all 0.2s ease;
 }
 
-.demo-copy-btn:hover {
-    @apply bg-tonbo-red;
+.demo-copy-svg{
+    @apply text-background-light
+}
+
+.demo-copy-btn:active {
+    @apply bg-tonbo-red text-tonbo-light;
+}
+
+.demo-copy-btn:active .demo-copy-svg {
+    @apply text-tonbo-light
 }
 
 .demo-copy-btn-mobile {
-    @apply bg-background-dark text-background-light px-3 py-2 font-code text-xs;
+    @apply bg-background-dark text-tonbo-colortx px-3 py-2 font-code text-xs;
 }
 
 .demo-code-block {
