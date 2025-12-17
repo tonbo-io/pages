@@ -4,11 +4,18 @@
 
 	const posts = [
 		{
+			title: 'Introducing Tonbo',
+			slug: 'introducing-tonbo',
+			desc: 'Tonbo is an open source embedded database library for building serverless, data intensive applications. It lets you embed data processing and analytics wherever they make sense, inside a Postgres extension, a client application, a lambda function, or even a browser page, without running or operating a separate database service.',
+			date: '2025/12/17',
+			isNew: true
+		},
+		{
 			title: 'Introducing Aisle: a pushdown Parquet scanner',
 			slug: 'introducing-aisle',
 			desc: "We are excited to introduce Aisle: a lightweight Parquet query library that delivers efficient predicate pushdown for reading Parquet files. Aisle's binary size is only about one-fifth of the DataFusion Parquet datasource, making it compact and easy to embed.",
 			date: '2025/05/29',
-			isNew: true,
+			isNew: false,
 			image: '/blog-images/filter-pushdown.png'
 		},
 		{
@@ -30,9 +37,9 @@
 			date: '2024/10/30'
 		},
 		{
-			title: 'Introducing Tonbo',
-			slug: 'introducing-tonbo',
-			desc: 'We\'re excited to announce that Tonbo is now open source in its preview version! Tonbo is an embedded persistent database written in Rust. It provides essential KV-like methods: insert, filter, and range scan, making it a foundation for data-intensive applications, including other types of databases. It also supports type-safe structured data storage. For Rust developers, we offer an ORM-like macro for ease of use...',
+			title: 'Introducing (Legacy) Tonbo',
+			slug: 'introducing-legacy-tonbo',
+			desc: "We're excited to announce that Tonbo is now open source in its preview version! Tonbo is an embedded persistent database written in Rust. It provides essential KV-like methods: insert, filter, and range scan, making it a foundation for data-intensive applications, including other types of databases. It also supports type-safe structured data storage. For Rust developers, we offer an ORM-like macro for ease of use...",
 			date: '2024/08/14'
 		}
 	];
@@ -44,7 +51,10 @@
 	>
 		<!-- header -->
 		<div class="flex m-auto w-full top-0 pt-12 pb-12">
-			<PageHeader title="Tonbo’s Blogs" subtitle="The latest news and updates from Tonbo and other thinkings." />
+			<PageHeader
+				title="Tonbo's Blogs"
+				subtitle="The latest news and updates from Tonbo and other thinkings."
+			/>
 		</div>
 
 		<div class="border-t border-black">
@@ -58,7 +68,7 @@
 							<div>
 								{#if post.isNew}
 									<span
-										class="bg-[#FF6B4A] text-white px-2 py-0.5 text-base !leading-[1.25rem] font-bold inline-block mb-4 w-fit"
+										class="bg-[#FF6B4A] text-background-light px-2 py-0.5 text-base !leading-[1.25rem] font-bold inline-block mb-4 w-fit"
 										>NEW</span
 									>
 								{/if}
@@ -68,7 +78,7 @@
 								>
 									<h2 class="text-2xl font-code mb-2 leading-tight">{post.title}</h2>
 								</a>
-								<p class="text-sm text-tonbo-gray mb-4">by Tzu Gwo • 4 minute read</p>
+								<p class="text-sm text-tonbo-gray mb-4">by Tzu Gwo • 3 minute read</p>
 								<p class="text-base !leading-[1.5] mb-4 text-background-dark max-w-[95%]">
 									{post.desc}
 								</p>
@@ -104,8 +114,8 @@
 							>
 								<h2 class="text-2xl font-code mb-2 leading-tight">{post.title}</h2>
 							</a>
-							<p class="text-sm text-tonbo-gray mb-2">by Tzu Gwo • 4 minute read</p>
-							<p class="text-xs text-tonbo-gray ">{post.date}</p>
+							<p class="text-sm text-tonbo-gray mb-2">by Tzu Gwo</p>
+							<p class="text-xs text-tonbo-gray">{post.date}</p>
 						</div>
 						<div class="flex flex-col">
 							<p class="text-base !leading-[1.5] mb-2 text-background-dark">

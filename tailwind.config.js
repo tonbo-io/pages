@@ -2,13 +2,13 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/svhighlight/**/*.svelte'],
 	theme: {
+		screens: {
+			xs: '480px',
+			sm: '640px',
+			md: '1200px',
+			lg: '1400px'
+		},
 		extend: {
-			screens: {
-				xs: '480px',
-				sm: '640px',
-				md: '1200px',
-				lg: '1400px'
-			},
 			colors: {
 				'background-dark': '#1F251A',
 				'background-light': '#E4E6D9',

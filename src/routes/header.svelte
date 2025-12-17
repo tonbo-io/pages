@@ -2,13 +2,12 @@
 	import Dragonfly from './dragonfly.svelte';
 	export let title = '';
 	export let subtitle = '';
-	export let showLinks = false;
 </script>
 
 <div class="tonbo-header apply-selection-light !h-auto flex-col gap-4 py-8">
 	<div class="flex items-center justify-center relative w-full">
 		<h2 class="text-3xl text-background-dark font-code mr-10 text-center">{title}</h2>
-		<div class="mb-3 pointer-events-none ">
+		<div class="mb-3 pointer-events-none">
 			<Dragonfly class="text-[4px]" />
 		</div>
 	</div>

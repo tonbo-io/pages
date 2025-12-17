@@ -167,7 +167,7 @@
     transition: all 0.2s ease;
 }
 
-.demo-copy-svg{
+.demo-copy-svg {
     @apply text-background-light
 }
 
@@ -185,13 +185,11 @@
 
 .demo-code-block {
     @apply p-6 font-code text-background-light;
-    background: #1F251A;
     border-radius: 8px;
 }
 
 .demo-code-block-mobile {
     @apply p-4 font-code text-background-light;
-    background: #1F251A;
     border-radius: 8px;
 }
 

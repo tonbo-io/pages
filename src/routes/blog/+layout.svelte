@@ -3,9 +3,7 @@
 </script>
 
 <div class="bg-background-light font-code">
-	<div
-		class="min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto "
-	>
+	<div class="min-h-screen h-fit w-full md:w-[1000px] lg:w-[1200px] m-auto">
 		<article
 			class="w-full sm:w-[600px] md:w-[800px] mx-auto relative flex flex-col text-background-dark px-10 leading-[1.618] pb-[4rem] md:border-x-0 border-background-dark sm:px-0"
 		>
@@ -19,16 +17,20 @@
 		@apply mt-10;
 	}
 
+	:global(.strong) {
+		@apply font-[1000];
+	}
+
 	:global(.blog-content h1) {
-		@apply text-[2.5rem] font-medium;
+		@apply text-[2.5rem] font-[1000];
 	}
 
 	:global(.blog-content h2) {
-		@apply text-[1.2rem] font-medium mt-[1.2rem];
+		@apply text-[1.4rem] font-[1000] mt-[1.4rem];
 	}
 
 	:global(.blog-content h3) {
-		@apply text-[1rem] font-medium mt-[1rem];
+		@apply text-[1.2rem] font-[1000] mt-[1rem];
 	}
 
 	:global(.blog-content p) {
