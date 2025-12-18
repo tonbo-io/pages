@@ -3,52 +3,98 @@
 	import XLogo from '$lib/images/x-logo.png';
 	import DiscordLogo from '$lib/images/discord-logo.png';
 	import GitHubLogo from '$lib/images/github-logo.svg';
+	import TabListIcon from '$lib/images/tablist.png';
+	import CloseIcon from '$lib/images/close.png';
+
+	let isMenuOpen = false;
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
 </script>
 
-<nav class={$$props.class}>
-	<div
-		class="absolute w-[calc(100%-2rem)] xs:w-[calc(100%-5rem)] sm:w-[600px] md:w-[1000px] lg:w-[1200px] border-2 md:border-b-0 border-[#e7f1be] left-1/2 transform -translate-x-1/2 top-[55px] md:bottom-0"
-	>
-		<div class="text-[#E7F1BE] md:hidden mt-[40px] mx-6">
-			Tonbo incurs minimal cost to insert and scan structured data via Apache Arrow.
+<nav class="{$$props.class}">
+	<div class="w-full flex flex-row items-center justify-between gap-4">
+		<!-- Logo -->
+		<a href="/">
+			<Tonbo inverted={true} />
+		</a>
+
+		<!-- Desktop Links -->
+		<div class="hidden sm:flex items-center flex-wrap justify-center">
+			<a href="/blogs">
+				<div type="button" class="nav-button">Blogs</div>
+			</a>
+			<a href="https://docs.rs/tonbo/0.4.0-a0/tonbo/">
+				<div type="button" class="nav-button">Docs</div>
+			</a>
+			<a href="/careers">
+				<div type="button" class="nav-button">Careers</div>
+			</a>
+			<a href="https://github.com/tonbo-io/tonbo">
+				<div type="button" class="nav-button-social group">
+					<img src={GitHubLogo} alt="GitHub Logo" class="nav-button-icon" />
+					<span class="hidden md:block">GitHub</span>
+				</div>
+			</a>
+			<a href="https://discord.gg/j27XVFVmJM">
+				<div type="button" class="nav-button-social group">
+					<img src={DiscordLogo} alt="Discord Logo" class="nav-button-icon" />
+					<span class="hidden md:block">Discord</span>
+				</div>
+			</a>
+			<a href="https://x.com/tonboio">
+				<div type="button" class="nav-button-social group">
+					<img src={XLogo} alt="X Logo" class="nav-button-icon-x" />
+					<span class="hidden md:block">X</span>
+				</div>
+			</a>
 		</div>
-		<div class="mt-[36px] relative w-full">
-			<div
-				class="absolute bottom-[-17px] md:bottom-[20px] z-10 flex order-last right-[10px] bg-background-dark"
-			>
-				<a href="/blogs">
-					<div type="button" class="nav-button">Blogs</div>
+
+		<!-- Mobile Menu Button -->
+		<button
+			class="sm:hidden text-background-light"
+			on:click={toggleMenu}
+		>
+			<img src={TabListIcon} alt="Menu" class="h-7 w-7" />
+		</button>
+	</div>
+
+	<!-- Mobile Menu Overlay -->
+	{#if isMenuOpen}
+		<div class="fixed inset-0 z-50 bg-background-dark px-4 py-2 flex flex-col">
+			<div class="w-full flex justify-between items-center pb-2 border-b border-background-light">
+				<a href="/" on:click={toggleMenu}>
+					<Tonbo inverted={true} />
 				</a>
-				<a href="/about">
-					<div type="button" class="nav-button">About</div>
+				<button
+					class="text-background-light"
+					on:click={toggleMenu}
+				>
+					<img src={CloseIcon} alt="Close Menu" class="h-7 w-7" />
+				</button>
+			</div>
+
+			<div class="flex flex-col items-center mt-10 space-y-6 text-background-light text-xl">
+				<a href="/blogs" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					Blogs
 				</a>
-				<a href="/careers">
-					<div type="button" class="nav-button">Careers</div>
+				<a href="https://docs.rs/tonbo/0.4.0-a0/tonbo/" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					Docs
 				</a>
-				<a href="https://github.com/tonbo-io/tonbo">
-					<div type="button" class="nav-button-social group">
-						<img src={GitHubLogo} alt="GitHub Logo" class="nav-button-icon" />
-						<span class="hidden sm:block">GitHub</span>
-					</div>
+				<a href="/careers" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					Careers
 				</a>
-				<a href="https://discord.gg/j27XVFVmJM">
-					<div type="button" class="nav-button-social group">
-						<img src={DiscordLogo} alt="Discord Logo" class="nav-button-icon" />
-						<span class="hidden sm:block">Discord</span>
-					</div>
+				<a href="https://github.com/tonbo-io/tonbo" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					GitHub
 				</a>
-				<a href="https://x.com/tonboio">
-					<div type="button" class="nav-button-social group">
-						<img src={XLogo} alt="X Logo" class="nav-button-icon-x" />
-						<span class="hidden sm:block">X</span>
-					</div>
+				<a href="https://discord.gg/j27XVFVmJM" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					Discord
+				</a>
+				<a href="https://x.com/tonboio" class="w-auto px-4 text-center pb-2 border-b border-background-light" on:click={toggleMenu}>
+					X
 				</a>
 			</div>
 		</div>
-	</div>
-	<div
-		class="w-fit z-10 h-[45px] border-l-[1rem] border-r-[1rem] border-background-dark bg-background-dark selection:bg-background-light selection:text-background-dark relative ml-6 xs:ml-12 sm:ml-0"
-	>
-		<a href="/"><Tonbo /></a>
-	</div>
+	{/if}
 </nav>

@@ -11,23 +11,23 @@
 
 /* Navigation */
 .nav-button {
-    @apply relative flex items-center justify-center h-8 px-1.5 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply relative flex items-center justify-center h-8 px-1.5 mx-1 border-[1px] cursor-pointer select-none sm:px-4;
     @apply border-background-light text-font-light bg-background-dark;
     @apply hover:bg-background-light hover:text-background-dark;
 }
 
 .nav-button-social {
-    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[2px] cursor-pointer select-none sm:px-4;
+    @apply relative flex items-center justify-center h-8 px-2 mx-1 border-[1px] cursor-pointer select-none sm:px-2;
     @apply border-background-light text-font-light bg-background-dark;
     @apply hover:bg-background-light hover:text-background-dark;
 }
 
 .nav-button-icon {
-    @apply max-w-[20px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[20px] sm:w-8 mr-0 md:mr-2 group-hover:invert;
 }
 
 .nav-button-icon-x {
-    @apply max-w-[15px] sm:w-8 sm:mr-2 group-hover:invert;
+    @apply max-w-[15px] sm:w-8 mr-0 md:mr-2 group-hover:invert;
 }
 
 /* Articles */
@@ -98,9 +98,126 @@
 }
 
 .feature-article {
-    @apply  pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+    @apply pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
 }
 
 .feature-article-last {
     @apply pb-[3rem] pt-[3rem] pl-[3rem] pr-[3rem] flex-1;
+}
+
+/* Stack Cards - Desktop */
+.stack-card {
+    @apply block sm:p-4 p-2 font-code;
+    background: #BFC4B2;
+    transition: all 0.2s ease;
+}
+
+.stack-card-secondary {
+    @apply block sm:p-4 p-2 font-code;
+    background: #EAEDE3;
+    transition: all 0.2s ease;
+}
+
+.stack-card-tertiary {
+    @apply block sm:p-4 p-2 font-code;
+    background: #CBCEC1;
+    transition: all 0.2s ease;
+}
+
+.stack-card:hover,
+.stack-card-secondary:hover,
+.stack-card-tertiary:hover {
+    @apply bg-background-dark text-background-light;
+}
+
+.stack-card:hover .stack-card-title,
+.stack-card:hover .stack-card-desc,
+.stack-card-secondary:hover .stack-card-title,
+.stack-card-secondary:hover .stack-card-desc,
+.stack-card-tertiary:hover .stack-card-title,
+.stack-card-tertiary:hover .stack-card-desc {
+    @apply text-background-light;
+}
+
+.stack-card-title {
+    @apply text-lg font-code text-background-dark block mb-2;
+}
+
+.stack-card-desc {
+    @apply text-sm text-background-dark;
+}
+
+/* Stack Cards - Mobile */
+.stack-card-mobile {
+    @apply block p-3 font-code;
+    background: #B5BDA3;
+}
+
+.stack-card-title-mobile {
+    @apply text-sm font-medium text-background-dark block mb-1;
+}
+
+.stack-card-desc-mobile {
+    @apply text-xs text-background-dark;
+}
+
+/* Demo Section */
+.demo-copy-btn {
+    @apply bg-[#666F63] text-tonbo-colortx px-5 py-4 font-code text-sm rounded-lg;
+    transition: all 0.2s ease;
+}
+
+.demo-copy-svg {
+    @apply text-background-light
+}
+
+.demo-copy-btn:active {
+    @apply bg-tonbo-red text-tonbo-light;
+}
+
+.demo-copy-btn:active .demo-copy-svg {
+    @apply text-tonbo-light
+}
+
+.demo-copy-btn-mobile {
+    @apply bg-background-dark text-tonbo-colortx px-3 py-2 font-code text-xs;
+}
+
+.demo-code-block {
+    @apply p-6 font-code text-background-light;
+    border-radius: 8px;
+}
+
+.demo-code-block-mobile {
+    @apply p-4 font-code text-background-light;
+    border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+.tonbo-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #E4E6D9 #1F251A;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #E4E6D9;
+    border-radius: 4px;
+    border: 2px solid #1F251A;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #BFC4B2;
+}
+
+.tonbo-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
 }

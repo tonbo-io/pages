@@ -1,213 +1,70 @@
+<svelte:head>
+	<title>Introducing Tonbo</title>
+	<meta name="description" content="Tonbo is an open source embedded database library for building serverless, data intensive applications." />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Introducing Tonbo" />
+	<meta name="twitter:description" content="Tonbo is an open source embedded database library for building serverless, data intensive applications." />
+	<meta name="twitter:image" content="https://pub-82daae30822c4a238642e8abc3c568a6.r2.dev/twitter%20card%20-%20introducing%20tonbo.png" />
+	<meta property="og:title" content="Introducing Tonbo" />
+	<meta property="og:description" content="Tonbo is an open source embedded database library for building serverless, data intensive applications." />
+	<meta property="og:image" content="https://pub-82daae30822c4a238642e8abc3c568a6.r2.dev/twitter%20card%20-%20introducing%20tonbo.png" />
+	<meta property="og:type" content="article" />
+</svelte:head>
+
 <script>
 	import Markdown from '$lib/components/Markdown.svelte';
-	import { CodeBlock } from 'svhighlight';
-	import 'highlight.js/styles/atom-one-dark.css';
-
-	const rustCode = `
-#[tonbo_record]
-pub struct User {
-    #[primary_key]
-    name: String,
-    email: Option<String>,
-    age: u8,
-}
-`;
-
-	const structuredCode = `
-let lower = "Alice".into();
-let upper = "Bob".into();
-let mut scan = txn
-    .scan((Bound::Included(&name), Bound::Excluded(&upper)))
-    .await
-     // just project first column, skip others when reading from db files
-    .projection(vec![1])
-    // only need one row
-    .limit(1)
-    .take()
-    .await.unwrap();
-`;
-
-	const asyncCode = `
-db.insert(User {
-    name: "Alice".into(),
-    email: Some("alice@gmail.com".into()),
-    age: 22,
-})
-.await.unwrap();
-
-let name = "Alice".into();
-let user = txn
-    .get(
-        &name,
-        Projection::All,
-    )
-    .await.unwrap();
-`;
 
 	const content = `
 # Introducing Tonbo
 
-August 14, 2024 by Tzu Gwo
+> We've bumped up the open-source Tonbo to the next version 0.4.0! It is now available on [crates.io](https://crates.io/crates/tonbo/0.4.0-a0).
 
-We're excited to announce that [Tonbo](https://github.com/tonbo-io/tonbo) is now open source in its preview version! Tonbo is an embedded persistent database written in Rust. It provides essential KV-like methods: \`insert\`, \`filter\`, and \`range scan\`, making it a foundation for data-intensive applications, including other types of databases. It also supports type-safe structured data storage. For Rust developers, we offer an ORM-like macro for ease of use:
+Tonbo is an open source embedded database library for building serverless, data intensive applications. It lets you embed data processing and analytics wherever they make sense, inside a Postgres extension, a client application, a lambda function, or even a browser page, without running or operating a separate database service.
+
+Tonbo can also persist data in object storage such as S3. This makes it possible to scale to zero, start up quickly, scale storage almost without limits, and safely share data across many short lived instances.
+
+Tonbo is a unified, merge-tree-style storage layer that sits behind stateless compute. It combines local disk and object storage, and lets you define rich schemas so your data can live remotely while your compute quickly scales to zero and cold-starts.
+
+## Why are we doing this?
+
+Future workloads, especially AI agents driven ones, are far more dynamic than traditional request response systems. A single user prompt can turn into hundreds of tool calls and model inferences. This is exactly the shape serverless compute was designed for. Supporting this kind of execution means we need to rethink the data layer, not just the compute layer.
+
+Serverless computing has pushed pay as you go execution to its logical extreme. Compute cost now scales almost linearly with traffic. But for data intensive applications, this promise often breaks down due to the data usually still lives in a long running database service. Connection limits, write hot spots, backups, upgrades, sharding, and cross region replication quickly pull you back into operations work. That gap is where the serverless experience starts to feel inconsistent, and Tonbo is our attempt to close it.
+
+## What makes Tonbo different?
+
+ Tonbo is often compared with other embedded databases like SQLite or DuckDB.  But Tonbo was not designed to solve the embedded use case alone. There are several fundamental differences:
+
+1. ### **Tonbo treats object storage as a first class backend**
+
+    Data can live in S3 while instances start and stop on demand, without depending on a permanently running database service. This matches how serverless systems actually work.
+
+2. ### **Tonbo makes concurrent reads and writes predictable on shared storage**
+
+    Object storage does not provide database style coordination by default. To make concurrent reads and writes predictable, we built [fusio-manifest](https://docs.rs/fusio-manifest/0.4.3/fusio_manifest/)  on top of conditional PUTs in object storage, urning critical metadata updates into coordinated atomic steps. This allows us to address concurrency control and read-write consistency on object storage, and enables multiple independent instances to safely share the same underlying data.
+
+3. ### **Optimizing for analytics, not classic OLTP**
+
+    Tonbo is built mainly for workloads like log analytics, observability, and online analysis. It uses layered Parquet as the storage format and [Arrow](https://github.com/tonbo-io/typed-arrow) as the in memory data format. This fits analytical access patterns well and allows data to be reused directly by the wider analytics ecosystem, instead of being locked into a single system: what is commonly referred to as “no vendor lock-in”
+
+
+Also, Tonbo implements some totally new insight:
+
+1. ### **Treating versioning and time travel as core features**
+
+    In many systems, history is an afterthought. In Tonbo, versioned data and fast time travel are built in from the start. This makes auditing, debugging, experiments, and version aware queries much easier, without adding extra pipelines or operational complexity.
+
+2. ### **Providing portable and efficient async IO**
+
+    As a database library, Tonbo needs to run in many environments, from local disks to remote object storage, that means Tonbo is totally async. That is why we built [fusio](https://github.com/tonbo-io/fusio), a lightweight IO layer that supports random reads and sequential writes across multiple backends, and works with different async runtimes.
+
+3. ### **API-centered Query abstractions designed for serverless control flow**
+
+    In serverless systems, a library style database often fits better than a SQL endpoint. Tonbo is therefore API first rather than SQL first. APIs make it easier to express execution intent, integrate with application logic, and still leave plenty of room for execution layer optimizations.
+
+
+For more features, please check them out: https://github.com/tonbo-io/tonbo
 `;
 </script>
 
 <Markdown {content} />
-
-<CodeBlock
-	language="rust"
-	code={rustCode}
-	showHeader={false}
-	showLineNumbers={true}
-	background="bg-background-dark"
-	codeTextClasses="font-code text-background-light text-[0.8rem]"
-	lineNumberTextClasses="font-code text-background-light"
-	rounded="rounded-none"
-/>
-
-<Markdown
-	content={`
-Tonbo enables fast and convenient querying over type-safe structured data. For example, integrating a query engine takes just a few hours of coding: [datafusion example](https://github.com/tonbo-io/tonbo/blob/main/examples/datafusion.rs) (official support for DataFusion will be included in the next release). In our preliminary benchmarks, Tonbo outperforms RocksDB by 2.2x in data scan scenarios, even though it's still in its early stages. If you're interested in Tonbo, please star the project on GitHub, follow us on [Twitter](https://x.com/tonboio), or join the conversation on [Discord](https://discord.gg/xa2KyKV5).
-
-## Why We Built Tonbo?
-
-Analytical tools in the [Apache Arrow](https://arrow.apache.org/) ecosystem (such as [Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion)) provide a nice foundation for data processing. They get a great balance between scalability, development efficiency, and execution performance, allowing developers to build efficient data analysis applications within days using DataFusion.
-
-However, most tools focus on the read path of databases. Every data-intensive application using DataFusion ends up spending significant time developing its own write path implementation. What if we could have a write path implementation as agile and performant as DataFusion?
-
-That's the primary design goal of Tonbo: to serve as an embedded database offering a highly scalable data storage engine for the Arrow ecosystem. Additionally, Tonbo also has a long-term goal: **provide offline-first distributed data storage capabilities, support rapid and flexible data storage across various environments—from embedded Linux and browsers to servers—and integrate with multiple storage systems such as file systems, OPFS, and S3.**
-`}
-/>
-
-<div class="w-full max-w-full overflow-x-auto">
-	<pre
-		class="inline-block p-4 font-mono text-xs whitespace-pre sm:text-sm md:text-base min-w-max leading-[1.3">
-
-╔═tonbo═════════════════════════════════════════════════════╗
-║                                                           ║
-║    ┌─────────client memory─┐  ┌─────────client memory─┐   ║
-║    │ ┏━━━━━━━━━━━━┓        │  │ ┏━━━━━━━━━━━━┓        │   ║
-║    │ ┃  memtable  ┃        │  │ ┃  memtable  ┃        │   ║
-║    │ ┗━━━━┳━━━━━━━┛        │  │ ┗━━━━┳━━━━━━━┛        │   ║
-║    │ ┏━━━━▼━━━━━━━┓        │  │ ┏━━━━▼━━━━━━━┓        │   ║
-║    │ ┃  memtable  ┃        │  │ ┃  memtable  ┃        │   ║
-║    │ ┗━━━━┳━━━━━━━┛        │  │ ┗━━━━┳━━━━━━━┛        │   ║
-║    │ ┏━━━━▼━━━━━━━┓        │  │ ┏━━━━▼━━━━━━━┓        │   ║
-║    │ ┃  memtable  ┃        │  │ ┃  memtable  ┃        │   ║
-║    │ ┗━━━━┳━━━━━━━┛        │  │ ┗━━━━┳━━━━━━━┛        │   ║
-║    └──────╂────────────────┘  └──────╂────────────────┘   ║
-║    ┌──────╂─client storage─┐  ┌──────╂─client storage─┐   ║
-║    │ ┏━━━━▼━━━━┓           │  │ ┏━━━━▼━━━━┓           │   ║
-║    │ ┃ parquet ┃           │  │ ┃ parquet ┃           │   ║
-║    │ ┗━━━━┳━━━━┛           │  │ ┗━━━━┳━━━━┛           │   ║
-║    └──────╂────────────────┘  └──────╂────────────────┘   ║
-║           ┣━━━━━━━━━━━━━━━━━━━━━━━━━━┛                    ║
-║    ┌──────╂────────────────────────────────server ssd─┐   ║
-║    │      ┣━━━━━━━━━━━┓                               │   ║
-║    │ ┏━━━━▼━━━━┓ ┏━━━━▼━━━━┓                          │   ║
-║    │ ┃ parquet ┃ ┃ parquet ┃                          │   ║
-║    │ ┗━━━━┳━━━━┛ ┗━━━━┳━━━━┛                          │   ║
-║    └──────╂───────────╂───────────────────────────────┘   ║
-║    ┌──────╂───────────╂────────object storage service─┐   ║
-║    │      ┣━━━━━━━━━━━╋━━━━━━━━━━━┳━━━━━━━━━━━┓       │   ║
-║    │ ┏━━━━▼━━━━┓ ┏━━━━▼━━━━┓ ┏━━━━▼━━━━┓ ┏━━━━▼━━━━┓  │   ║
-║    │ ┃ parquet ┃ ┃ parquet ┃ ┃ parquet ┃ ┃ parquet ┃  │   ║
-║    │ ┗━━━━━━━━━┛ ┗━━━━━━━━━┛ ┗━━━━━━━━━┛ ┗━━━━━━━━━┛  │   ║
-║    └──────────────────────────────────────────────────┘   ║
-║                                                           ║
-╚═══════════════════════════════════════════════════════════╝
-</pre>
-</div>
-
-<Markdown
-	content={`
-## How is Tonbo Designed?
-
-### LSM Tree
-
-Tonbo is built on the [LSM Tree](https://en.wikipedia.org/wiki/Log-structured_merge-tree) architecture. Typically, databases use either [Log-Structured Merge (LSM) trees or B+ trees](https://tikv.org/deep-dive/key-value-engine/b-tree-vs-lsm/). The primary advantage of LSM trees is that all foreground writes are performed in memory, while background writes are sequential, resulting in very high write throughput.
-
-LSM trees also have minimal file system requirements: they only need a file system that supports append-only operations to achieve high-performance data insertion and updates. This makes Tonbo suitable for a wide range of devices, from flash storage to SSDs. By offloading tasks like data clean-up and compaction to the background, LSM trees streamline the read/write process and reduce the load on the frontend.
-
-### Type-Safe Structured Storage
-
-As mentioned earlier, Tonbo extends beyond a traditional KV database to support reading and writing structured data. This capability is achieved by faithfully translating user-defined data structures into Arrow schemas. Tonbo leverages the features provided by Arrow/Parquet to support pushdown operations like \`limit\`, \`project\`, and \`filter\`:
-`}
-/>
-
-<CodeBlock
-	language="rust"
-	code={structuredCode}
-	showHeader={false}
-	showLineNumbers={true}
-	background="bg-background-dark"
-	codeTextClasses="font-code text-background-light text-[0.8rem]"
-	lineNumberTextClasses="font-code text-background-light"
-	rounded="rounded-none"
-/>
-
-<Markdown
-	content={`
-This means that Tonbo can precisely scan the data specified by the user, skipping irrelevant data, leading to potentially more than tenfold improvements in querying efficiency when used appropriately. Additionally, according to compile-time type hints, Tonbo can transmute bytes read from files into user-defined data types for free. In many data-intensive applications, serialization overhead can account for 30% to 50% of the total load.
-
-### Asynchronous
-
-Tonbo fully supports asynchronous methods:
-`}
-/>
-
-<CodeBlock
-	language="rust"
-	code={asyncCode}
-	showHeader={false}
-	showLineNumbers={true}
-	background="bg-background-dark"
-	codeTextClasses="font-code text-background-light text-[0.8rem]"
-	lineNumberTextClasses="font-code text-background-light"
-	rounded="rounded-none"
-/>
-
-<Markdown
-	content={`
-Using asynchronous interfaces not only increases the efficiency of concurrent operations, but also allows Tonbo to provide concurrent access on resource-constrained devices, such as browsers, mobile apps, and embedded Linux systems. The LSM Tree architecture, as mentioned in previous sections, requires background tasks for garbage collection and compaction of newly written data, which can be challenging to implement in browsers since they cannot easily start background tasks. By leveraging WASM and async Rust interfaces, we can build a complete asynchronous task chain from OPFS to the JavaScript scheduler. In our upcoming blog posts, we will describe in detail how we achieve this—bear witness!
-`}
-/>
-
-<div class="w-full max-w-full overflow-x-auto">
-	<pre
-		class="inline-block p-4 font-mono text-xs whitespace-pre sm:text-sm md:text-base min-w-max leading-[1.3">
-
-					╔═Web APP══════════════════════╗
-					║                              ║
-					║ ┏━JS microtasks━━━━━━━━━━━━┓ ║
-					║ ┃                          ┃ ║
-					║ ┃ ┏╍WASM binding╍╍╍╍╍╍╍╍╍┓ ┃ ║
-					║ ┃ ┇                      ┇ ┃ ║
-					║ ┃ ┇ ┏━Tonbo async API━━┓ ┇ ┃ ║
-					║ ┃ ┇ ┃                  ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┏╍WASM binding╍┓ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┇              ┇ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┇   ┏━━━━━━┓   ┇ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┇   ┃ OPFS ┃   ┇ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┇   ┗━━━━━━┛   ┇ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┃ ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛ ┃ ┇ ┃ ║
-					║ ┃ ┇ ┗━━━━━━━━━━━━━━━━━━┛ ┇ ┃ ║
-					║ ┃ ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┅┛ ┃ ║
-					║ ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛ ║
-					╚══════════════════════════════╝
-	</pre>
-</div>
-
-<Markdown
-	content={`
-## Futures and Promises
-
-As we prepare for our next release, we plan to introduce several new features:
-
-- **Runtime Schema Declaration**: Basic support for JavaScript (WASM) and Python.
-- **S3 Integration**: Implementation of tiered LSM Trees based on this integration.
-
-We will soon offer a unified solution for both self-hosted and cloud environments, enabling the creation of offline-first storage and backup services on any remote storage platform. Designs and implementations are only valuable with real-world usage and feedback. If you believe our work could benefit you, please reach out directly. We're excited to collaborate and provide any assistance we can.
-`}
-/>

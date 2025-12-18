@@ -4,9 +4,9 @@
 	import 'highlight.js/styles/atom-one-dark.css';
 </script>
 
-<div class="bg-[#E7F1BE] font-code">
+<div class="bg-background-light font-code">
 	<div
-		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 md:border-b-2 border-black"
+		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto"
 	>
 		<div class="hidden sm:flex sm:w-full md:w-[998px] lg:w-[1198px] m-auto pt-12">
 			<PageHeader title="Careers" />
