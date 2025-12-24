@@ -5,9 +5,7 @@
 </script>
 
 <div class="bg-background-light font-code">
-	<div
-		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto"
-	>
+	<div class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto">
 		<div class="hidden sm:flex sm:w-full md:w-[998px] lg:w-[1198px] m-auto pt-12">
 			<PageHeader title="Careers" />
 		</div>
@@ -20,16 +18,16 @@
 					Careers
 				</h1> -->
 				<p class="mb-4">
-					We’re Tonbo IO Inc., founded in Fall 2023. We believe real-time analytics has never been
+					We're Tonbo IO Inc., founded in Fall 2023. We believe real-time analytics has never been
 					more valuable or accessible for agile and creative teams — yet the data infrastructure
-					they need is still missing. We’re not building just one product, but a full data stack
+					they need is still missing. We're not building just one product, but a full data stack
 					that makes it easy to build data-intensive functions — flexible and scales to zero.
 				</p>
 				<p class="mb-4">
 					You can check out our open-source work here: <a
 						href="https://github.com/tonbo-io"
 						class="underline hover:text-tonbo-red">https://github.com/tonbo-io</a
-					>. We’re working hard to turn these ideas into products that deliver out-of-the-box value.
+					>. We're working hard to turn these ideas into products that deliver out-of-the-box value.
 				</p>
 				<p>We are looking for:</p>
 				<ul class="list-disc pl-6">
@@ -47,7 +45,7 @@
 			<div class="job-listings mt-8">
 				<a href="/careers/product-engineer" class="block">
 					<div
-						class="job-card p-6 mb-6 border-2 border-black bg-background-light text-black hover:bg-background-dark hover:text-[#E7F1BE]"
+						class="job-card p-6 mb-6 border-2 border-black bg-background-light text-black hover:bg-background-dark hover:text-background-light"
 					>
 						<h2 class="text-xl font-bold mb-2">Product Engineer</h2>
 						<p class="mb-4">
@@ -55,19 +53,17 @@
 							engine with our database engineers.
 						</p>
 						<div class="flex flex-wrap gap-2 mb-4">
-							<span class="px-2 py-1 bg-[#E7F1BE] text-black text-sm border border-black"
+							<span class="px-2 py-1 bg-background-dark text-background-light text-sm"
 								>Full-time</span
 							>
-							<span class="px-2 py-1 bg-[#E7F1BE] text-black text-sm border border-black"
-								>Remote</span
-							>
+							<span class="px-2 py-1 bg-background-dark text-background-light text-sm">Remote</span>
 						</div>
 					</div>
 				</a>
 
 				<a href="/careers/database-engineer" class="block">
 					<div
-						class="job-card p-6 mb-6 border-2 border-black bg-background-light text-black hover:bg-background-dark hover:text-[#E7F1BE]"
+						class="job-card p-6 mb-6 border-2 border-black bg-background-light text-black hover:bg-background-dark hover:text-background-light"
 					>
 						<h2 class="text-xl font-bold mb-2">Database Engineer</h2>
 						<p class="mb-4">
@@ -75,12 +71,10 @@
 							analytics database service with our product engineers.
 						</p>
 						<div class="flex flex-wrap gap-2 mb-4">
-							<span class="px-2 py-1 bg-[#E7F1BE] text-black text-sm border border-black"
+							<span class="px-2 py-1 bg-background-dark text-background-light text-sm"
 								>Full-time</span
 							>
-							<span class="px-2 py-1 bg-[#E7F1BE] text-black text-sm border border-black"
-								>Remote</span
-							>
+							<span class="px-2 py-1 bg-background-dark text-background-light text-sm">Remote</span>
 						</div>
 					</div>
 				</a>

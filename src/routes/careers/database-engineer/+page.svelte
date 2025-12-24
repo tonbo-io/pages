@@ -3,10 +3,10 @@
 	import 'highlight.js/styles/atom-one-dark.css';
 </script>
 
-<div class="bg-background-light font-code selection:bg-background-dark selection:text-background-light">
-	<div
-		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto "
-	>
+<div
+	class="bg-background-light font-code selection:bg-background-dark selection:text-background-light"
+>
+	<div class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto">
 		<div class="hidden sm:flex sm:w-full md:w-[998px] lg:w-[1198px] m-auto pt-12">
 			<PageHeader title="Database Engineer" />
 		</div>
@@ -98,7 +98,7 @@
 				</div> -->
 
 				<div
-					class="apply-section mt-12 mb-8 p-6 border-2 border-black bg-background-dark text-[#E7F1BE]"
+					class="apply-section mt-12 mb-8 p-6 border-2 border-black bg-background-dark text-background-light"
 				>
 					<h2 class="text-xl font-bold mb-4">How to Apply</h2>
 					<p class="mb-4">

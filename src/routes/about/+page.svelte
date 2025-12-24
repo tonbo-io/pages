@@ -4,7 +4,7 @@
 	import 'highlight.js/styles/atom-one-dark.css';
 </script>
 
-<div class="bg-[#E7F1BE] font-code">
+<div class="bg-background-dark font-code">
 	<div
 		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 md:border-b-2 border-black"
 	>
