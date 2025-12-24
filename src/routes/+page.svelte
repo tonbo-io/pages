@@ -412,9 +412,9 @@
 					<p class="text-base font-code text-background-dark font-bold">I/O</p>
 					<a
 						href="https://github.com/tonbo-io/fusio"
-						class="stack-card-tertiary py-4 flex flex-col justify-center"
+						class="stack-card-tertiary py-4 flex-1 flex flex-col justify-center"
 					>
-						<span class="stack-card-title"
+						<span class="stack-card-title fusio-icon-wrapper"
 							>Fusio <img
 								src="/fusio-icon.svg"
 								alt="fusio"
@@ -425,7 +425,7 @@
 					</a>
 					<a
 						href="https://github.com/tonbo-io/typed-arrow"
-						class="stack-card-tertiary py-4 flex flex-col justify-center"
+						class="stack-card-tertiary py-4 flex-1 flex flex-col justify-center"
 					>
 						<span class="stack-card-title">typed-arrow →</span>
 						<p class="stack-card-desc text-xs">typed Arrow schemas</p>
@@ -457,7 +457,7 @@
 
 			<!-- Right: Cards grid -->
 			<div
-				class="w-full sm:w-2/3 md:w-3/4 flex flex-col sm:grid sm:grid-cols-3 gap-0 sm:gap-4 py-4"
+				class="w-full md:w-3/4 flex flex-col sm:grid sm:grid-cols-3 gap-0 sm:gap-4 py-4"
 			>
 				<!-- User Interface Column -->
 				<div class="flex flex-col gap-4 py-4 sm:px-2 sm:py-2">
@@ -505,7 +505,7 @@
 						href="https://github.com/tonbo-io/fusio"
 						class="stack-card-tertiary h-40 w-full py-4 flex-1 sm:flex-none"
 					>
-						<span class="stack-card-title"
+						<span class="stack-card-title fusio-icon-wrapper"
 							>Fusio <img
 								src="/fusio-icon.svg"
 								alt="fusio"
