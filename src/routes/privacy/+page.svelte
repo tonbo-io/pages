@@ -10,7 +10,7 @@
 	/>
 </svelte:head>
 
-<div class="min-h-screen bg-white text-black font-code">
+<div class="min-h-screen bg-background-light text-black font-code">
 	<div
 		class="min-h-screen h-fit sm:w-full md:w-[1000px] lg:w-[1200px] m-auto md:border-x-2 md:border-b-2 border-black"
 	>
