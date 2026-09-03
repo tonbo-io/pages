@@ -33,5 +33,6 @@
 	<div class="tonbo-footer-content flex flex-wrap gap-x-6 gap-y-2">
 		<span>© Copyright 2024-, Tonbo IO Inc.</span>
 		<a class="underline" href="/privacy">Privacy Policy</a>
+		<a class="underline" href="/security">Security &amp; Abuse</a>
 	</div>
 </div>
