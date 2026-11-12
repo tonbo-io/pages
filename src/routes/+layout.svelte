@@ -34,5 +34,6 @@
 		<span>© Copyright 2024-, Tonbo IO Inc.</span>
 		<a class="underline" href="/privacy">Privacy Policy</a>
 		<a class="underline" href="/security">Security &amp; Abuse</a>
+		<a class="underline" href="https://tonbo.dev">Tonbo Cloud</a>
 	</div>
 </div>
